@@ -19,13 +19,48 @@
 
 <body class="front_body map_api_body">
 	<div class="page_wrap">
+		<header class="header_wrap">
+			<hgroup class="hgroup_wrap">
+				<div class="hgroup_logo_cols">
+					<h1 class="toplogo">
+						<a href="#" class="toplogo_link"><img src="./assets/images/toplogo.png" alt="UAM VCDM"></a>
+						<span class="toplogo_text">SE1GA</span>
+					</h1>
+				</div>
+				<div class="hgroup_util_cols">
+					<ul class="hgroup_util_text_list">
+						<li><span class="hgroup_util">2023-02-20</span></li>
+						<li><span class="hgroup_util">12:41:24</span></li>
+						<li><span class="hgroup_util">KST</span></li>
+					</ul>
+					<a href="#" class="btn_ico_util ico_logout"><span class="hdtext">로그아웃</span></a>
+				</div>
+			</hgroup>
+			<nav class="nav_list_wrap">
+				<ul class="nav_list">
+					<li id="nav_01"><a href="#" class="nav_one"><span class="nav_one_text">MONITOR</span></a></li>
+					<li id="nav_02"><a href="#" class="nav_one"><span class="nav_one_text">TIMELINE</span></a></li>
+					<li id="nav_03"><a href="#" class="nav_one"><span class="nav_one_text">FLIGHT</span></a></li>
+					<li id="nav_04"><a href="#" class="nav_one"><span class="nav_one_text">ALERT</span></a></li>
+					<li id="nav_05"><a href="#" class="nav_one"><span class="nav_one_text">INFO</span></a></li>
+					<li id="nav_06"><a href="#" class="nav_one"><span class="nav_one_text">SETTING</span></a></li>
+				</ul>
+			</nav>
+		</header>
+		<section class="middle_wrap">
+			내용이 들어갑니다.
+		</section>
+		<footer class="footer_wrap type2">
+			<div class="footer_layer_item"><span class="footer_bottom_logo"><img src="./assets/images/footer_logo2.png" alt="neighbor system"></span></div>
+		</footer>
 
 		<script>
+			menuRock("#nav_04");
+
 			// 퍼블확인용
 			let url = window.location.href.split('?')[1];
 			let url_2 = url !== undefined ? url.split('#')[0] : null;
-			/* if(url_2 === "loading"){
-			} */
+			if (url_2 === "loading") {}
 		</script>
 	</div>
 </body>

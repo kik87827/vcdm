@@ -498,7 +498,7 @@ html.smooth {
 }
 
 .tui-calendar .tui-calendar-today {
-  color: #01a37c;
+  color: #3f4858;
 }
 
 .tui-calendar .tui-calendar-prev-month, .tui-calendar .tui-calendar-next-month {
@@ -510,7 +510,7 @@ html.smooth {
 }
 
 .tui-calendar .tui-calendar-btn-choice {
-  background-color: #01a37c;
+  background-color: #3f4858;
 }
 
 .tui-calendar .tui-calendar-btn-close {
@@ -544,7 +544,7 @@ html.smooth {
 
 .tui-datepicker {
   border-radius: 4px;
-  border: solid 1px #01a37c;
+  border: solid 1px #3f4858;
   background-color: white;
   position: absolute;
   overflow: hidden;
@@ -701,7 +701,7 @@ html.smooth {
 }
 
 .tui-datepicker .tui-is-selectable.tui-is-selected, .tui-datepicker.tui-rangepicker .tui-is-selectable.tui-is-selected {
-  background-color: #01a37c;
+  background-color: #3f4858;
   color: #fff;
 }
 
@@ -869,7 +869,7 @@ html.smooth {
   background: #fff url(../images/ico_select_arrow.png) no-repeat 100% 0/19px auto;
 }
 .tui-timepicker .tui-timepicker-select:focus {
-  border-color: #01a37c;
+  border-color: #3f4858;
 }
 
 .tui-timepicker .tui-timepicker-select::-ms-expand {
@@ -1755,7 +1755,6 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 
 .front_body {
   min-width: 1440px;
-  background: #f5f6fa;
   min-height: 100vh;
 }
 .front_body.center_form_body {
@@ -1765,7 +1764,6 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 1440px;
   margin: 0 auto;
 }
 .page_wrap > div:not(.tooltip_wrap),
@@ -1774,6 +1772,196 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 .page_wrap > footer {
   width: 100%;
   box-sizing: border-box;
+}
+
+.header_wrap {
+  flex: 0;
+}
+
+.hgroup_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 56px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 0 30px;
+}
+
+.toplogo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 0;
+  font-size: 0;
+}
+
+.toplogo_link {
+  display: inline-block;
+}
+
+.toplogo_link > img {
+  vertical-align: middle;
+  max-width: 155px;
+}
+
+.toplogo_text {
+  display: inline-block;
+  border: 1px solid #cecece;
+  font-weight: 500;
+  border-radius: 100px;
+  color: #1b1b1b;
+  line-height: 1;
+  padding: 6px 12px;
+  font-size: 15px;
+}
+
+.hgroup_util_cols {
+  display: flex;
+  gap: 12px;
+}
+
+.hgroup_util_text_list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hgroup_util {
+  color: #2b2b2b;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.btn_ico_util {
+  display: inline-block;
+  line-height: 0;
+  font-size: 0;
+  background-position: 0 0;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.btn_ico_util.ico_logout {
+  background-image: url("../images/ico_logout.png");
+  width: 24px;
+  height: 20px;
+}
+
+.nav_list_wrap {
+  height: 64px;
+  position: relative;
+  padding: 0 8.3333333333%;
+}
+
+.nav_list_wrap:before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #333c4c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav_list {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  gap: 3%;
+}
+
+.nav_list > li {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav_one {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+}
+
+.nav_one:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: #333c4c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.nav_list > li.active .nav_one:after {
+  opacity: 1;
+}
+
+.nav_one:hover:after {
+  opacity: 1;
+}
+
+.footer_wrap {
+  flex: 0 0 40px;
+  background: #1c212a;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 0 30px;
+  align-items: center;
+  border-top: 1px solid #1c212a;
+  box-sizing: border-box;
+}
+
+.footer_copy {
+  font-size: 13px;
+  color: #ffde00;
+  line-height: 1;
+  position: relative;
+  top: -1px;
+}
+
+.footer_layer_item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 30px 0 0;
+}
+
+.footer_bottom_logo {
+  max-width: 160px;
+}
+
+.footer_bottom_logo img {
+  vertical-align: top;
+}
+
+.footer_wrap.type2 {
+  background: #fff;
+  border-top-color: #e7e7e7;
+}
+
+.middle_wrap {
+  min-height: 0;
+  flex: 1;
 }
 
 /* 공통 popup */
@@ -1978,7 +2166,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   background: #98979d;
 }
 .btn_dmsm.btn_dmsmidentify {
-  background: #01a37c;
+  background: #3f4858;
 }
 
 .bg_design_modal {
