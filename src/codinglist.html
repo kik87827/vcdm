@@ -46,6 +46,7 @@ a:hover {text-decoration:underline;}
 .depth td{background:#1b1b1b;color:#fff;text-align:left;font-size:20px;padding:10px 20px !important;}
 .depth2 td{background:#e2dbfb;color:#000;text-align:left;font-size:16px;padding:10px 20px !important;}
 .dev_notice{border-top:1px solid #000;border-bottom:1px solid #000;padding:10px;margin:30px 0;}
+p.warn{color:red !important;font-weight:500 !important;}
 </style>
 <script>
 	function procedure(w,h,url) {
@@ -74,27 +75,30 @@ a:hover {text-decoration:underline;}
 			<colgroup>
 				<col width="3%" />
 				<col />
-				<col width="25%" />
-				<col width="12%" />
-				<col width="25%" />
+				<col width="20%" />
+				<col width="15%" />
+				<col width="10%" />
+				<col width="20%" />
 			</colgroup>
 			<thead>
 				<tr>
 					<th>no.</th>
 					<th>filename/link</th>
 					<th>HTML 파일명</th>
+					<th>DESIGN</th>
 					<th>현황</th>
 					<th>전달사항</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr class="depth">
-					<td colspan="5">개발시 참고 페이지</td>
+					<td colspan="6">개발시 참고 페이지</td>
 				</tr>
 				<tr>
 					<td class="no"></td>
 					<td class="link"><a href="layout.html" target="_blank">레이아웃 샘플</a></td>
 					<td class="td_url"></td>
+					<td class="design"></td>
 					<td class="work end"></td>
 					<td class="bgo"></td>
 				</tr>
@@ -102,6 +106,7 @@ a:hover {text-decoration:underline;}
 					<td class="no"></td>
 					<td class="link"><a href="layout2.html" target="_blank">레이아웃 샘플2</a></td>
 					<td class="td_url"></td>
+					<td class="design"></td>
 					<td class="work end"></td>
 					<td class="bgo"></td>
 				</tr>
@@ -109,6 +114,7 @@ a:hover {text-decoration:underline;}
 					<td class="no"></td>
 					<td class="link"><a href="modal.html" target="_blank">modal 샘플</a></td>
 					<td class="td_url"></td>
+					<td class="design"></td>
 					<td class="work end"></td>
 					<td class="bgo"></td>
 				</tr>
@@ -116,6 +122,7 @@ a:hover {text-decoration:underline;}
 					<td class="no"></td>
 					<td class="link"><a href="dialogue.html" target="_blank">dialogue 샘플</a></td>
 					<td class="td_url"></td>
+					<td class="design"></td>
 					<td class="work end"></td>
 					<td class="bgo"></td>
 				</tr>
@@ -123,69 +130,141 @@ a:hover {text-decoration:underline;}
 					<td class="no"></td>
 					<td class="link"><a href="layout.html?loading" target="_blank">loading 샘플</a></td>
 					<td class="td_url"></td>
+					<td class="design"></td>
 					<td class="work end"></td>
 					<td class="bgo"></td>
 				</tr>
 				<tr class="depth">
-					<td colspan="5">MONITOR</td>
+					<td colspan="6">VPO</td>
 				</tr>
 				<tr>
 					<td class="no"></td>
-					<td class="link"><a href="monitor_port.html" target="_blank">01_버티포트_운항현황</a></td>
+					<td class="link"><a href="login.html" target="_blank">로그인</a></td>
 					<td class="td_url"></td>
+					<td class="design"><p class="warn">디자인 수급 필요</p></td>
 					<td class="work"></td>
 					<td class="bgo"></td>
-				</tr>
-				<tr class="depth">
-					<td colspan="5">TIMELINE</td>
 				</tr>
 				<tr>
 					<td class="no"></td>
-					<td class="link"><a href="timeline_schedule.html" target="_blank">02_스케줄_타임라인</a></td>
+					<td class="link"><a href="monitor_port.html" target="_blank">MONITOR</a></td>
 					<td class="td_url"></td>
+					<td class="design">01_버티포트_운항현황.png</td>
 					<td class="work"></td>
 					<td class="bgo"></td>
-				</tr>
-				<tr class="depth">
-					<td colspan="5">FLIGHT</td>
 				</tr>
 				<tr>
 					<td class="no"></td>
-					<td class="link"><a href="flight_milestone.html" target="_blank">0301_MILESTONE</a></td>
+					<td class="link"><a href="timeline_schedule.html" target="_blank">TIMELINE</a></td>
 					<td class="td_url"></td>
+					<td class="design"><p class="warn">디자인 수급 필요</p></td>
 					<td class="work"></td>
 					<td class="bgo"></td>
-				</tr>
-				<tr class="depth">
-					<td colspan="5">ALERT</td>
 				</tr>
 				<tr>
 					<td class="no"></td>
-					<td class="link"><a href="alert_setting.html" target="_blank">0604_SETTING</a></td>
+					<td class="link"><a href="timeline_schedule_chart_type2.html" target="_blank">TIMELINE chart type2</a></td>
 					<td class="td_url"></td>
+					<td class="design">02_스케줄_타임라인.png</td>
 					<td class="work"></td>
 					<td class="bgo"></td>
-				</tr>
-				<!-- <tr class="depth">
-					<td colspan="5">INFO</td>
 				</tr>
 				<tr>
 					<td class="no"></td>
-					<td class="link"><a href="#" target="_blank"></a></td>
+					<td class="link"><a href="flight_milestone.html" target="_blank">MILESTONE - ARRIVAL</a></td>
 					<td class="td_url"></td>
+					<td class="design">0301_MILESTONE.png</td>
 					<td class="work"></td>
 					<td class="bgo"></td>
-				</tr>
-				<tr class="depth">
-					<td colspan="5">SETTING</td>
 				</tr>
 				<tr>
 					<td class="no"></td>
-					<td class="link"><a href="#" target="_blank"></a></td>
+					<td class="link"><a href="flight_milestone_departure.html" target="_blank">MILESTONE - DEPARTURE</a></td>
 					<td class="td_url"></td>
+					<td class="design"></td>
 					<td class="work"></td>
 					<td class="bgo"></td>
-				</tr> -->
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="link"><a href="popup_form_timedata.html" target="_blank">[팝업]시간정보 입력</a></td>
+					<td class="td_url"></td>
+					<td class="design"><p class="warn">디자인 수급 필요</p></td>
+					<td class="work"></td>
+					<td class="bgo"></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="link"><a href="popup_flight_milestone_flight.html" target="_blank">[팝업]MILESTONE - FLIGHT</a></td>
+					<td class="td_url"></td>
+					<td class="design">0302_기체상세_FLIGHT.png</td>
+					<td class="work"></td>
+					<td class="bgo"></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="link"><a href="popup_flight_milestone_alert.html" target="_blank">[팝업]MILESTONE - ALERT</a></td>
+					<td class="td_url"></td>
+					<td class="design">0303_기체상세_ALERT.png</td>
+					<td class="work"></td>
+					<td class="bgo"></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="link"><a href="popup_flight_milestone_history.html" target="_blank">[팝업]MILESTONE - HISTORY</a></td>
+					<td class="td_url"></td>
+					<td class="design"></td>
+					<td class="work"></td>
+					<td class="bgo"></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="link"><a href="popup_flight_milestone_aircraft.html" target="_blank">[팝업]MILESTONE - AIRCRAFT</a></td>
+					<td class="td_url"></td>
+					<td class="design"></td>
+					<td class="work"></td>
+					<td class="bgo">[ppt coment]추후 update 예정입니다.</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="link"><a href="alarm_alerts_list.html" target="_blank">ALARM - ALERTS LIST</a></td>
+					<td class="td_url"></td>
+					<td class="design">0401_ALARM.png</td>
+					<td class="work"></td>
+					<td class="bgo"></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="link"><a href="info_weather.html" target="_blank">INFO - WEATHER</a></td>
+					<td class="td_url"></td>
+					<td class="design"></td>
+					<td class="work"></td>
+					<td class="bgo"></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="link"><a href="info_notam.html" target="_blank">INFO - NOTAM</a></td>
+					<td class="td_url"></td>
+					<td class="design"></td>
+					<td class="work"></td>
+					<td class="bgo"></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="link"><a href="info_vertiport.html" target="_blank">INFO - VERTIPORT</a></td>
+					<td class="td_url"></td>
+					<td class="design"></td>
+					<td class="work"></td>
+					<td class="bgo"></td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="link"><a href="setting.html" target="_blank">0604_SETTING</a></td>
+					<td class="td_url"></td>
+					<td class="design">0604_SETTING.png</td>
+					<td class="work"></td>
+					<td class="bgo"></td>
+				</tr>
 			</tbody>
 		</table>
   </div>

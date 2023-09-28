@@ -7,9 +7,9 @@ html:not(.touchmode) {
 
 
 .front_body{
-  min-width:1440px;min-height:100vh;
+  min-height:100vh;
   &.center_form_body{
-    background: url("../images/login_bg_1920.png") no-repeat 0 0/cover;
+    
   }
   &.map_api_body{
     
@@ -21,7 +21,11 @@ html:not(.touchmode) {
     > header,
     > footer{width:100%;box-sizing: border-box;}
 }
-
+.center_form_wrap{
+  &.page_wrap{display:flex;align-items: center;justify-content: center;}
+}
+.cform_content_box_wrap{padding:30px;}
+.cform_content_box{max-width:500px;margin:0 auto;outline:1px solid #ddd;padding:30px;}
 
 .header_wrap{flex:0;}
 .hgroup_wrap{display:flex;justify-content: space-between;align-items: center;min-height:56px;box-sizing: border-box;border-bottom:1px solid #e1e1e1;padding:0 30px;}

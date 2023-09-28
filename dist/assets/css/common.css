@@ -1754,11 +1754,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 }
 
 .front_body {
-  min-width: 1440px;
   min-height: 100vh;
-}
-.front_body.center_form_body {
-  background: url("../images/login_bg_1920.png") no-repeat 0 0/cover;
 }
 .page_wrap {
   display: flex;
@@ -1772,6 +1768,23 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 .page_wrap > footer {
   width: 100%;
   box-sizing: border-box;
+}
+
+.center_form_wrap.page_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cform_content_box_wrap {
+  padding: 30px;
+}
+
+.cform_content_box {
+  max-width: 500px;
+  margin: 0 auto;
+  outline: 1px solid #ddd;
+  padding: 30px;
 }
 
 .header_wrap {

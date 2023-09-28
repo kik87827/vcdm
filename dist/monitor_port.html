@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="format-detection" content="telephone=no" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=1440" />
+	<meta name="viewport" content="width=1024" />
 	<link rel="stylesheet" href="./assets/css/common.css" />
 	<script src="./assets/js/jquery-3.4.1.min.js"></script>
 	<script src="./assets/js/dynamicListener.min.js"></script>
@@ -48,7 +48,193 @@
 			</nav>
 		</header>
 		<section class="middle_wrap">
-			내용이 들어갑니다.
+			<div class="data_grid_wrap">
+				<div class="data_both_row">
+					<div class="data_both_cols">
+						<div class="section_tab_package">
+							<div class="section_tab_row">
+								<div classs="section_tab_main_cols">
+									<ul class="section_tab_list">
+										<li><a href="#" class="section_tab active">ARRIVAL</a></li>
+										<li><a href="#" class="section_tab">DEPARTURES</a></li>
+									</ul>
+								</div>
+								<div class="section_tab_else_cols">
+									<ul class="chart_guide_item_list">
+										<li>
+											<div class="chart_guide_item">
+												<i class="chart_guide_bullet" style="background-color:#fff;border-color:#d8d8d8;"></i>
+												<span class="chart_guide_value">운항예정</span>
+											</div>
+										</li>
+										<li>
+											<div class="chart_guide_item">
+												<i class="chart_guide_bullet" style="background-color:#34be74;border-color:#34be74;"></i>
+												<span class="chart_guide_value">운항중</span>
+											</div>
+										</li>
+										<li>
+											<div class="chart_guide_item">
+												<i class="chart_guide_bullet" style="background-color:#ffc000;border-color:#ffc000;"></i>
+												<span class="chart_guide_value">Caution Alert 발생</span>
+											</div>
+										</li>
+										<li>
+											<div class="chart_guide_item">
+												<i class="chart_guide_bullet" style="background-color:#ff6060;border-color:#ff6060;"></i>
+												<span class="chart_guide_value">Warning Alert 발생</span>
+											</div>
+										</li>
+										<li>
+											<div class="chart_guide_item">
+												<i class="chart_guide_bullet" style="background-color:#eff7ff;border-color:#d8d8d8;"></i>
+												<span class="chart_guide_value">운항완료</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="section_chart_row">
+								<div style="display:flex;width:100%;height:175px;background:#ddd;color:#000;">
+									chart
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="data_both_cols">
+						<div class="donut_chart_list_wrap">
+							<ul calss="donut_chart_list">
+								<li>
+									<div class="donut_chart_item">
+										<div class="donut_chart_graphic_row">
+											<div class="donut_chart_graphic_render">
+												<img src="./assets/images/temp_chart.png" alt="">
+											</div>
+											<div class="graphic_current_value_item">
+												<span class="graphic_value">90</span>
+												<span class="graphic_unit">%</span>
+											</div>
+										</div>
+										<div class="donut_chart_spec_row">
+											<p class="donut_chart_spec">Schedule Completion</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="donut_chart_item">
+										<div class="donut_chart_graphic_row">
+											<div class="donut_chart_graphic_render">
+												<img src="./assets/images/temp_chart_02.png" alt="">
+											</div>
+											<div class="graphic_current_value_item">
+												<span class="graphic_value">60</span>
+												<span class="graphic_unit">%</span>
+											</div>
+										</div>
+										<div class="donut_chart_spec_row">
+											<p class="donut_chart_spec">TOBT Quality</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="donut_chart_item">
+										<div class="donut_chart_graphic_row">
+											<div class="donut_chart_graphic_render">
+												<img src="./assets/images/temp_chart_03.png" alt="">
+											</div>
+											<div class="graphic_current_value_item">
+												<span class="graphic_value">25</span>
+												<span class="graphic_unit">%</span>
+											</div>
+										</div>
+										<div class="donut_chart_spec_row">
+											<p class="donut_chart_spec">ALERT</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="data_single_row">
+					<div class="data_single_container">
+						<div class="data_single_short_cols"><span class="data_single_short_key">FATO</span></div>
+						<div class="data_single_long_cols">
+							<div class="data_tb_render_container">
+								<div class="data_tb_render_cols">
+									<div class="render_key_row">
+										<a href="javascript:;" class="render_key_bar">14A</a>
+									</div>
+									<div class="render_data_table_row">
+										<div style="display:flex;width:100%;height:175px;background:#ddd;color:#000;">
+											table
+										</div>
+									</div>
+								</div>
+								<div class="data_tb_render_cols">
+									<div class="render_key_row">
+										<a href="javascript:;" class="render_key_bar active">32A</a>
+									</div>
+									<div class="render_data_table_row">
+										<div style="display:flex;width:100%;height:175px;background:#ddd;color:#000;">
+											table
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="data_single_row">
+					<div class="data_single_container">
+						<div class="data_single_short_cols"><span class="data_single_short_key">STAND</span></div>
+						<div class="data_single_long_cols">
+							<div class="data_tb_render_container">
+								<div class="data_tb_render_cols">
+									<div class="render_key_row">
+										<a href="javascript:;" class="render_key_bar">1</a>
+									</div>
+									<div class="render_data_table_row">
+										<div style="display:flex;width:100%;height:175px;background:#ddd;color:#000;">
+											table
+										</div>
+									</div>
+								</div>
+								<div class="data_tb_render_cols">
+									<div class="render_key_row">
+										<a href="javascript:;" class="render_key_bar active">2</a>
+									</div>
+									<div class="render_data_table_row">
+										<div style="display:flex;width:100%;height:175px;background:#ddd;color:#000;">
+											table
+										</div>
+									</div>
+								</div>
+								<div class="data_tb_render_cols">
+									<div class="render_key_row">
+										<a href="javascript:;" class="render_key_bar">3</a>
+									</div>
+									<div class="render_data_table_row">
+										<div style="display:flex;width:100%;height:175px;background:#ddd;color:#000;">
+											table
+										</div>
+									</div>
+								</div>
+								<div class="data_tb_render_cols">
+									<div class="render_key_row">
+										<a href="javascript:;" class="render_key_bar">4</a>
+									</div>
+									<div class="render_data_table_row">
+										<div style="display:flex;width:100%;height:175px;background:#ddd;color:#000;">
+											table
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 		<footer class="footer_wrap">
 			<div class="footer_main_item">
@@ -56,33 +242,12 @@
 			</div>
 			<div class="footer_layer_item"><span class="footer_bottom_logo"><img src="./assets/images/footer_logo.png" alt="neighbor system"></span></div>
 		</footer>
-
-		<div class="loading_layer">
-			<div class="loading_item_wrap">
-				<div class="loading_item">
-					<div class="loading_ico">
-						<div class="dot-spinner">
-							<div class="dot-spinner__dot"></div>
-							<div class="dot-spinner__dot"></div>
-							<div class="dot-spinner__dot"></div>
-							<div class="dot-spinner__dot"></div>
-							<div class="dot-spinner__dot"></div>
-							<div class="dot-spinner__dot"></div>
-							<div class="dot-spinner__dot"></div>
-							<div class="dot-spinner__dot"></div>
-						</div>
-					</div>
-					<div class="loading_text">LOADING</div>
-				</div>
-			</div>
-		</div>
 		<script>
 			menuRock("#nav_01");
 
 			// 퍼블확인용
 			let url = window.location.href.split('?')[1];
 			let url_2 = url !== undefined ? url.split('#')[0] : null;
-			if (url_2 === "loading") {}
 		</script>
 	</div>
 </body>
