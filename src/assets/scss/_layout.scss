@@ -15,7 +15,7 @@ html:not(.touchmode) {
     
   }
 }
-.page_wrap{display:flex;flex-direction: column;height:100vh; margin:0 auto;
+.page_wrap{display:flex;flex-direction: column;min-height:100vh; margin:0 auto;
     > div:not(.tooltip_wrap),
     > section,
     > header,
@@ -67,7 +67,7 @@ html:not(.touchmode) {
 
   
 /* 공통 popup */
-.popup_wrap {position: fixed;top: 0;left: 0;width: 100%;height: 100%;opacity:0;transition:.4s;z-index: 130;display: none;align-items: center;justify-content: center;min-width:1440px;overflow: hidden;flex-wrap: wrap;box-sizing:border-box;padding:0 20px;
+.popup_wrap {position: fixed;top: 0;left: 0;width: 100%;height: 100%;opacity:0;transition:.4s;z-index: 130;display: none;align-items: center;justify-content: center;min-width:1024px;overflow: hidden;flex-wrap: wrap;box-sizing:border-box;padding:0 20px;
   &.active {display: flex;}
   &.motion_end{opacity:1;}
   &.widtype2 {
@@ -77,14 +77,13 @@ html:not(.touchmode) {
     .popup_title_low{
       border-bottom:1px solid #ddd;padding:16px 0 0;margin:0 40px;
     }
-    .popup_content_low{margin-top:30px;}
+    .popup_content_row{margin-top:30px;}
   }
 }
 
 .popup_item {
-  box-sizing: border-box;z-index: 20;width:1080px;margin: 40px auto;max-height: calc(100% - 80px);background:#fff;position: relative;display: flex;border-radius:20px;flex-direction: column;border-radius: 20px;
+  box-sizing: border-box;z-index: 20;max-width:1440px;margin: 40px auto;max-height: calc(100% - 80px);background:#fff;position: relative;display: flex;border:2px solid #333c4c;flex-direction: column;border-radius: 10px;
   box-shadow: 6px 6px 10px 0 rgba(17, 16, 66, 0.2);
-  &:after{display:block;content:'';height:20px;flex:0 0 20px;}
 }
 
 .layer_wrap_parent{
@@ -101,21 +100,25 @@ html:not(.touchmode) {
 }
 
 
-.bg_dim {display: block;width: 100%;height: 100%;position: fixed;top: 0;left: 0;z-index: 0;background: #222;opacity:.6;
+.bg_dim {display: block;width: 100%;height: 100%;position: fixed;top: 0;left: 0;z-index: 0;background: #000;opacity:.8;
 }
 
-.popup_title_low {flex: 0;padding: 16px 70px 0 40px;}
+.popup_top_row {flex: 0;padding: 0 30px 0 30px;}
+.popup_top_row .boxtab_list_wrap{padding-top:23px;}
 
-.popup_title {font-size: 18px;color: #2b2b2b;padding: 34px 0 16px;font-weight: 700;
-  font-size: 22px;
-  line-height: 1;
-  letter-spacing: -0.44px;
-  color: #313444;
-}
+.btn_popup_close{display:block;width:36px;height:36px;background:url("../images/ic_popup_close@2x.png") no-repeat 50% 50%/14px auto;position:absolute;top:15px;right:23px;}
 
-.btn_popup_close{display:block;width:40px;height:40px;background:url("../images/ic_popup_close@2x.png") no-repeat 0 0/100% auto;position:absolute;top:16px;right:16px;}
+.popup_content_row{flex:1;min-height:0;position:relative;overflow:hidden;overflow-y:overlay;padding:30px 30px 40px;}
 
-.popup_content_low{flex:1;min-height:0;position:relative;overflow:hidden;overflow-y:overlay;padding:0 40px 40px;}
+.popup_footer_row{flex:0 0 40px;display:flex;justify-content: flex-end;position:relative;padding:0 30px;align-items: center;border-top:1px solid #e7e7e7;box-sizing: border-box;}
+
+
+.popup_top_title{font-size:20px;color:#000;line-height:1.4;font-weight:500;padding:20px 40px 0 0;}
+.footer_bottom_logo{max-width:160px;}
+.footer_bottom_logo img{vertical-align: top;}
+
+.popup_footer_bottom_logo{max-width:160px;}
+.popup_footer_bottom_logo img{vertical-align: top;}
 
 .screen_content_both{display:flex;position:relative;
   &:after{display:block;content:'';width:1px;height:calc(100% + 24px);position:absolute;top:-24px;right:42%;background:#d9d9d9;}
@@ -126,6 +129,17 @@ html:not(.touchmode) {
 .screen_content_main_cols{flex:1;min-width:0;padding:16px 30px 100px;}
 .screen_content_sub_cols{flex: 0 0 42%;box-sizing: border-box;width:42%;padding:26px 30px 100px;}
 
+
+.boxtab_list_wrap{position:relative;}
+.boxtab_list_wrap:before{display:block;content:'';width:100%;height:1px;background:#3d4758;position:absolute;bottom:0;left:0;}
+.boxtab_list{display:flex;padding-left:1px;}
+.boxtab_list > li{overflow:hidden;margin-left:-1px;}
+.boxtab_list > li:last-of-type{}
+.boxtab{display:flex;min-width:220px;min-height:50px;align-items: center;justify-content: center;border:1px solid #3d4758;border-radius:10px 10px 0 0;box-sizing: border-box;background:#fff;}
+.boxtab_text{font-size:16px;color:#3f4858;line-height:1;position:relative;top:1px;}
+.boxtab.active{background:#3f4858;}
+.boxtab.active .boxtab_text{color:#fff;}
+.boxtab_list_wrap{}
 
 
 

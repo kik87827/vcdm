@@ -6,116 +6,118 @@
 		@@include('./include/_header.html')
 		<section class="middle_wrap">
 			<div class="data_grid_wrap">
-				<div class="data_both_row">
-					<div class="data_both_cols">
-						<div class="section_tab_package">
-							<div class="section_tab_row">
-								<div classs="section_tab_main_cols">
-									<ul class="section_tab_list">
-										<li><a href="#" class="section_tab active">ARRIVAL</a></li>
-										<li><a href="#" class="section_tab">DEPARTURES</a></li>
-									</ul>
+				<div class="data_both_row_wrap">
+					<div class="data_both_row">
+						<div class="data_both_data_cols">
+							<div class="section_tab_package">
+								<div class="section_tab_row">
+									<div classs="section_tab_main_cols">
+										<ul class="section_tab_list">
+											<li><a href="#" class="section_tab active">ARRIVAL</a></li>
+											<li><a href="#" class="section_tab">DEPARTURES</a></li>
+										</ul>
+									</div>
+									<div class="section_tab_else_cols">
+										<ul class="chart_guide_item_list">
+											<li>
+												<div class="chart_guide_item">
+													<i class="chart_guide_bullet" style="background-color:#fff;border-color:#d8d8d8;"></i>
+													<span class="chart_guide_value">운항예정</span>
+												</div>
+											</li>
+											<li>
+												<div class="chart_guide_item">
+													<i class="chart_guide_bullet" style="background-color:#34be74;border-color:#34be74;"></i>
+													<span class="chart_guide_value">운항중</span>
+												</div>
+											</li>
+											<li>
+												<div class="chart_guide_item">
+													<i class="chart_guide_bullet" style="background-color:#ffc000;border-color:#ffc000;"></i>
+													<span class="chart_guide_value">Caution Alert 발생</span>
+												</div>
+											</li>
+											<li>
+												<div class="chart_guide_item">
+													<i class="chart_guide_bullet" style="background-color:#ff6060;border-color:#ff6060;"></i>
+													<span class="chart_guide_value">Warning Alert 발생</span>
+												</div>
+											</li>
+											<li>
+												<div class="chart_guide_item">
+													<i class="chart_guide_bullet" style="background-color:#eff7ff;border-color:#d8d8d8;"></i>
+													<span class="chart_guide_value">운항완료</span>
+												</div>
+											</li>
+										</ul>
+									</div>
 								</div>
-								<div class="section_tab_else_cols">
-									<ul class="chart_guide_item_list">
-										<li>
-											<div class="chart_guide_item">
-												<i class="chart_guide_bullet" style="background-color:#fff;border-color:#d8d8d8;"></i>
-												<span class="chart_guide_value">운항예정</span>
-											</div>
-										</li>
-										<li>
-											<div class="chart_guide_item">
-												<i class="chart_guide_bullet" style="background-color:#34be74;border-color:#34be74;"></i>
-												<span class="chart_guide_value">운항중</span>
-											</div>
-										</li>
-										<li>
-											<div class="chart_guide_item">
-												<i class="chart_guide_bullet" style="background-color:#ffc000;border-color:#ffc000;"></i>
-												<span class="chart_guide_value">Caution Alert 발생</span>
-											</div>
-										</li>
-										<li>
-											<div class="chart_guide_item">
-												<i class="chart_guide_bullet" style="background-color:#ff6060;border-color:#ff6060;"></i>
-												<span class="chart_guide_value">Warning Alert 발생</span>
-											</div>
-										</li>
-										<li>
-											<div class="chart_guide_item">
-												<i class="chart_guide_bullet" style="background-color:#eff7ff;border-color:#d8d8d8;"></i>
-												<span class="chart_guide_value">운항완료</span>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="section_chart_row">
-								<div style="display:flex;width:100%;height:175px;background:#ddd;color:#000;">
-									chart
+								<div class="section_chart_row">
+									<div style="display:flex;width:100%;min-height:175px;background:#ddd;color:#000;align-items: center;justify-content: center;">
+										chart
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="data_both_cols">
-						<div class="donut_chart_list_wrap">
-							<ul calss="donut_chart_list">
-								<li>
-									<div class="donut_chart_item">
-										<div class="donut_chart_graphic_row">
-											<div class="donut_chart_graphic_render">
-												<img src="./assets/images/temp_chart.png" alt="">
+						<div class="data_both_chart_cols">
+							<div class="donut_chart_list_wrap">
+								<ul class="donut_chart_list">
+									<li>
+										<div class="donut_chart_item">
+											<div class="donut_chart_graphic_row">
+												<div class="donut_chart_graphic_render">
+													<img src="./assets/images/temp_chart.png" alt="">
+												</div>
+												<div class="graphic_current_value_item">
+													<span class="graphic_value">90</span>
+													<span class="graphic_unit">%</span>
+												</div>
 											</div>
-											<div class="graphic_current_value_item">
-												<span class="graphic_value">90</span>
-												<span class="graphic_unit">%</span>
-											</div>
-										</div>
-										<div class="donut_chart_spec_row">
-											<p class="donut_chart_spec">Schedule Completion</p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="donut_chart_item">
-										<div class="donut_chart_graphic_row">
-											<div class="donut_chart_graphic_render">
-												<img src="./assets/images/temp_chart_02.png" alt="">
-											</div>
-											<div class="graphic_current_value_item">
-												<span class="graphic_value">60</span>
-												<span class="graphic_unit">%</span>
+											<div class="donut_chart_spec_row">
+												<p class="donut_chart_spec">Schedule Completion</p>
 											</div>
 										</div>
-										<div class="donut_chart_spec_row">
-											<p class="donut_chart_spec">TOBT Quality</p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="donut_chart_item">
-										<div class="donut_chart_graphic_row">
-											<div class="donut_chart_graphic_render">
-												<img src="./assets/images/temp_chart_03.png" alt="">
+									</li>
+									<li>
+										<div class="donut_chart_item">
+											<div class="donut_chart_graphic_row">
+												<div class="donut_chart_graphic_render">
+													<img src="./assets/images/temp_chart_02.png" alt="">
+												</div>
+												<div class="graphic_current_value_item">
+													<span class="graphic_value">60</span>
+													<span class="graphic_unit">%</span>
+												</div>
 											</div>
-											<div class="graphic_current_value_item">
-												<span class="graphic_value">25</span>
-												<span class="graphic_unit">%</span>
+											<div class="donut_chart_spec_row">
+												<p class="donut_chart_spec">TOBT Quality</p>
 											</div>
 										</div>
-										<div class="donut_chart_spec_row">
-											<p class="donut_chart_spec">ALERT</p>
+									</li>
+									<li>
+										<div class="donut_chart_item">
+											<div class="donut_chart_graphic_row">
+												<div class="donut_chart_graphic_render">
+													<img src="./assets/images/temp_chart_03.png" alt="">
+												</div>
+												<div class="graphic_current_value_item">
+													<span class="graphic_value">25</span>
+													<span class="graphic_unit">%</span>
+												</div>
+											</div>
+											<div class="donut_chart_spec_row">
+												<p class="donut_chart_spec">ALERT</p>
+											</div>
 										</div>
-									</div>
-								</li>
-							</ul>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="data_single_row">
 					<div class="data_single_container">
-						<div class="data_single_short_cols"><span class="data_single_short_key">FATO</span></div>
+						<div class="data_single_short_cols"><span class="data_single_short_key">F<br>A<br>T<br>O</span></div>
 						<div class="data_single_long_cols">
 							<div class="data_tb_render_container">
 								<div class="data_tb_render_cols">
@@ -123,7 +125,7 @@
 										<a href="javascript:;" class="render_key_bar">14A</a>
 									</div>
 									<div class="render_data_table_row">
-										<div style="display:flex;width:100%;height:175px;background:#ddd;color:#000;">
+										<div style="display:flex;width:100%;min-height:175px;background:#ddd;color:#000;justify-content: center;align-items: center;">
 											table
 										</div>
 									</div>
@@ -133,7 +135,7 @@
 										<a href="javascript:;" class="render_key_bar active">32A</a>
 									</div>
 									<div class="render_data_table_row">
-										<div style="display:flex;width:100%;height:175px;background:#ddd;color:#000;">
+										<div style="display:flex;width:100%;min-height:175px;background:#ddd;color:#000;justify-content: center;align-items: center;">
 											table
 										</div>
 									</div>
@@ -144,7 +146,7 @@
 				</div>
 				<div class="data_single_row">
 					<div class="data_single_container">
-						<div class="data_single_short_cols"><span class="data_single_short_key">STAND</span></div>
+						<div class="data_single_short_cols"><span class="data_single_short_key type2">S<br>T<br>A<br>N<br>D</span></div>
 						<div class="data_single_long_cols">
 							<div class="data_tb_render_container">
 								<div class="data_tb_render_cols">
@@ -152,7 +154,7 @@
 										<a href="javascript:;" class="render_key_bar">1</a>
 									</div>
 									<div class="render_data_table_row">
-										<div style="display:flex;width:100%;height:175px;background:#ddd;color:#000;">
+										<div style="display:flex;width:100%;min-height:175px;background:#ddd;color:#000;align-items: center;justify-content: center;">
 											table
 										</div>
 									</div>
@@ -162,7 +164,7 @@
 										<a href="javascript:;" class="render_key_bar active">2</a>
 									</div>
 									<div class="render_data_table_row">
-										<div style="display:flex;width:100%;height:175px;background:#ddd;color:#000;">
+										<div style="display:flex;width:100%;min-height:175px;background:#ddd;color:#000;align-items: center;justify-content: center;">
 											table
 										</div>
 									</div>
@@ -172,7 +174,7 @@
 										<a href="javascript:;" class="render_key_bar">3</a>
 									</div>
 									<div class="render_data_table_row">
-										<div style="display:flex;width:100%;height:175px;background:#ddd;color:#000;">
+										<div style="display:flex;width:100%;min-height:175px;background:#ddd;color:#000;align-items: center;justify-content: center;">
 											table
 										</div>
 									</div>
@@ -182,7 +184,7 @@
 										<a href="javascript:;" class="render_key_bar">4</a>
 									</div>
 									<div class="render_data_table_row">
-										<div style="display:flex;width:100%;height:175px;background:#ddd;color:#000;">
+										<div style="display:flex;width:100%;min-height:175px;background:#ddd;color:#000;align-items: center;justify-content: center;">
 											table
 										</div>
 									</div>

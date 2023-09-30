@@ -10,8 +10,7 @@
 	<script src="./assets/js/jquery-3.4.1.min.js"></script>
 	<script src="./assets/js/dynamicListener.min.js"></script>
 	<script src="./assets/js/swiper.min.js"></script>
-	<script src="./assets/js/tui-time-picker.js"></script>
-	<script src="./assets/js/tui-date-picker.js"></script>
+	<script src="./assets/js/jquery-ui.js"></script>
 	<script src="./assets/js/ui.js"></script>
 
 	<title></title>
@@ -48,7 +47,203 @@
 			</nav>
 		</header>
 		<section class="middle_wrap">
-			내용이 들어갑니다.
+			<div class="data_timeline_wrap">
+				<div class="data_timeline_util_row">
+					<div class="data_timeline_guide_cols">
+						<ul class="chart_guide_item_list">
+							<li>
+								<div class="chart_guide_item">
+									<i class="chart_guide_bullet" style="background-color:#fff;border-color:#d8d8d8;"></i>
+									<span class="chart_guide_value">운항예정</span>
+								</div>
+							</li>
+							<li>
+								<div class="chart_guide_item">
+									<i class="chart_guide_bullet" style="background-color:#34be74;border-color:#34be74;"></i>
+									<span class="chart_guide_value">운항중</span>
+								</div>
+							</li>
+							<li>
+								<div class="chart_guide_item">
+									<i class="chart_guide_bullet" style="background-color:#ffc000;border-color:#ffc000;"></i>
+									<span class="chart_guide_value">Caution Alert 발생</span>
+								</div>
+							</li>
+							<li>
+								<div class="chart_guide_item">
+									<i class="chart_guide_bullet" style="background-color:#ff6060;border-color:#ff6060;"></i>
+									<span class="chart_guide_value">Warning Alert 발생</span>
+								</div>
+							</li>
+							<li>
+								<div class="chart_guide_item">
+									<i class="chart_guide_bullet" style="background-color:#eff7ff;border-color:#d8d8d8;"></i>
+									<span class="chart_guide_value">운항완료</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="data_timeline_else_cols">
+						<input type="text" class="form_calendar" value="2023-02-20">
+					</div>
+				</div>
+				<div class="data_timeline_container_row">
+					<div class="data_timeline_container">
+						<div class="data_timeline_key_cols">
+							<div class="timeline_label_box_vitem_wrap">
+								<div class="timeline_label_box_vitem">
+									<div class="timeline_text_box">A<br>R<br>R<br>I<br>V<br>A<br>L</div>
+									<div class="timeline_number_box_group">
+										<div class="timeline_number_box">1</div>
+										<div class="timeline_number_box">2</div>
+										<div class="timeline_number_box">3</div>
+										<div class="timeline_number_box">4</div>
+									</div>
+								</div>
+								<div class="timeline_label_box_vitem type2">
+									<div class="timeline_text_box">D<br>E<br>P<br>A<br>R<br>T<br>U<br>R<br>E</div>
+									<div class="timeline_number_box_group">
+										<div class="timeline_number_box">1</div>
+										<div class="timeline_number_box">2</div>
+										<div class="timeline_number_box">3</div>
+										<div class="timeline_number_box">4</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="data_timeline_chart_cols">
+							<div class="swiper-container timeline-chart-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="chart_cellgrid_wrap">
+											<div class="cellgrid_unit_item">
+												<div class="cellgrid_unit_row">
+
+												</div>
+												<div class="cellgrid_unit_row">
+
+												</div>
+												<div class="cellgrid_unit_row">
+
+												</div>
+												<div class="cellgrid_unit_row">
+
+												</div>
+											</div>
+											<div class="cellgrid_unit_item time_unit_item">
+												<ul class="time_unit_list">
+													<li></li>
+													<li><span class="time_unit_text">12:00</span></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li><span class="time_unit_text">12:10</span></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li><span class="time_unit_text">12:20</span></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li><span class="time_unit_text">12:30</span></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li><span class="time_unit_text">12:40</span></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li><span class="time_unit_text">12:50</span></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li><span class="time_unit_text">13:00</span></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li><span class="time_unit_text">13:10</span></li>
+												</ul>
+											</div>
+											<div class="cellgrid_unit_item">
+												<div class="cellgrid_unit_row">
+
+												</div>
+												<div class="cellgrid_unit_row">
+
+												</div>
+												<div class="cellgrid_unit_row">
+
+												</div>
+												<div class="cellgrid_unit_row">
+
+												</div>
+											</div>
+											<div class="cellgrid_horizontal_line_group">
+												<ul class="cellgrid_horizontal_line_list">
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+													<li></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+						<div class="data_timeline_box_cols">
+							<div class="timeline_summary_box">
+								<div class="timeline_summary_title_row">
+									<i class="down"></i>
+									<div class="timeline_summary_title">UAM0123</div>
+								</div>
+								<div class="timeline_summary_content_row">
+									내용이 들어갑니다.
+								</div>
+							</div>
+							<div class="timeline_summary_title"><span class="timeline_summary_title_text">LINK FLIGHT</span></div>
+							<div class="timeline_summary_box">
+								<div class="timeline_summary_title_row">
+									<i class="up"></i>
+									<div class="timeline_summary_title">UAM0123</div>
+								</div>
+								<div class="timeline_summary_content_row">
+									내용이 들어갑니다.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 		<footer class="footer_wrap type2">
 			<div class="footer_layer_item"><span class="footer_bottom_logo"><img src="./assets/images/footer_logo2.png" alt="neighbor system"></span></div>
