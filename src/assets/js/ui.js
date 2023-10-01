@@ -363,6 +363,7 @@ DesignModal.prototype.bindEvent = function (option) {
 /* 달력호출 */
 function datePicker(){
 	var $datepicker = $(".form_calendar");
+  let touchstart = "ontouchstart" in window;
 	if($datepicker.length){
 		$datepicker.each(function(){
 			var $dateThis = $(this);
@@ -387,4 +388,28 @@ function datePicker(){
 			$(window).on("resize");
 		});*/
 	}
+}
+
+/* timeline */
+
+function timeLineFunc(){
+  let swiperScroll = null;
+  swiperScroll = new Swiper(".timeline-chart-container", {
+    slidesPerView: "auto",
+    freeMode: true,
+    // touchRatio: 0,
+    // breakpoints : {
+    //   768 : {
+    //     touchRatio: 1
+    //   }
+    // },
+    // allowTouchMove : false,
+    threshold: 0,
+    touchReleaseOnEdges : true,
+    snapGrid : 0,
+    mousewheel: true,
+    scrollbar : {
+      el: ".timeline-chart-scrollbar"
+    }
+  });
 }

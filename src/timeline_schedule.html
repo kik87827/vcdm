@@ -46,7 +46,7 @@
 					</div>
 				</div>
 				<div class="data_timeline_container_row">
-					<div class="data_timeline_container">
+					<div class="data_timeline_container type2">
 						<div class="data_timeline_key_cols">
 							<div class="timeline_label_box_vitem_wrap">
 								<div class="timeline_label_box_vitem">
@@ -76,8 +76,8 @@
 										@@include('./include/_cellgrid.html')
 									</div>
 								</div>
-								<div class="swiper-scrollbar"></div>
 							</div>
+							<div class="swiper-scrollbar timeline-chart-scrollbar"></div>
 						</div>
 						<div class="data_timeline_box_cols">
 							<div class="timeline_summary_box">
@@ -89,7 +89,7 @@
 									내용이 들어갑니다.
 								</div>
 							</div>
-							<div class="timeline_summary_title"><span class="timeline_summary_title_text">LINK FLIGHT</span></div>
+							<div class="timeline_summary_else"><span class="timeline_summary_else_text">LINK FLIGHT</span></div>
 							<div class="timeline_summary_box">
 								<div class="timeline_summary_title_row">
 									<i class="down"></i>
@@ -108,6 +108,8 @@
 
 		<script>
 			menuRock("#nav_02");
+
+			timeLineFunc();
 
 			// 퍼블확인용
 			let url = window.location.href.split('?')[1];
