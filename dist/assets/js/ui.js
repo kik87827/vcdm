@@ -396,22 +396,59 @@ function datePicker() {
 
 function timeLineFunc() {
   let swiperScroll = null;
-  swiperScroll = new Swiper(".timeline-chart-container", {
-    slidesPerView: "auto",
-    freeMode: true,
-    // touchRatio: 0,
-    // breakpoints : {
-    //   768 : {
-    //     touchRatio: 1
-    //   }
-    // },
-    // allowTouchMove : false,
-    threshold: 0,
-    touchReleaseOnEdges: true,
-    snapGrid: 0,
-    mousewheel: true,
-    scrollbar: {
-      el: ".timeline-chart-scrollbar"
+  if (swiperScroll == null) {
+    swiperScroll = new Swiper(".timeline-chart-container", {
+      slidesPerView: "auto",
+      freeMode: true,
+      // touchRatio: 0,
+      // breakpoints : {
+      //   768 : {
+      //     touchRatio: 1
+      //   }
+      // },
+      // allowTouchMove : false,
+      threshold: 0,
+      touchReleaseOnEdges: true,
+      snapGrid: 0,
+      mousewheel: true,
+      scrollbar: {
+        el: ".timeline-chart-scrollbar"
+      }
+    });
+  } else {
+    swiperScroll.update();
+  }
+}
+
+function tableScrollFunc(target) {
+  const targetDom = document.querySelector(target);
+  const targetDomScroll = targetDom.querySelector(".swiper-tbody-scroll");
+  const targetDomWrapper = targetDom.querySelector(".swiper-wrapper");
+  const targetDomSlide = targetDom.querySelector(".swiper-slide");
+
+  let swiperScroll = null;
+  if (swiperScroll == null) {
+    swiperScroll = new Swiper(target + " .swiper-tbody-scroll", {
+      direction: "vertical",
+      slidesPerView: "auto",
+      freeMode: true,
+      scrollbar: {
+        el: target + " .swiper-scrollbar"
+      },
+      mousewheel: true
+    });
+
+  } else {
+    swiperScroll.update();
+  }
+  disabledFunc();
+
+  function disabledFunc() {
+    console.log(targetDomSlide.getBoundingClientRect().height);
+    if (targetDomScroll.getBoundingClientRect().height > targetDomWrapper.getBoundingClientRect().height) {
+      targetDomWrapper.classList.add("disabled");
+    } else {
+      targetDomWrapper.classList.remove("disabled");
     }
-  });
+  }
 }

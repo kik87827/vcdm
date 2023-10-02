@@ -63,8 +63,8 @@ html:not(.touchmode) {
 .footer_bottom_logo img{vertical-align: top;}
 .footer_wrap.type2{background:#fff;border-top-color:#e7e7e7;}
 
-.middle_wrap{min-height:0;flex:1;}
-
+.middle_wrap{min-height:0;flex:1;position:relative;}
+.middle_wrap.type2{display:flex;flex-direction: column;}
   
 /* 공통 popup */
 .popup_wrap {position: fixed;top: 0;left: 0;width: 100%;height: 100%;opacity:0;transition:.4s;z-index: 130;display: none;align-items: center;justify-content: center;min-width:1024px;overflow: hidden;flex-wrap: wrap;box-sizing:border-box;padding:0 20px;

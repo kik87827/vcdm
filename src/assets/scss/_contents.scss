@@ -18,7 +18,7 @@ input.form_input{}
 .btn_cform_submit_text{}
 
 /* monitor */
-.data_grid_wrap{padding:46px 30px;}
+.data_grid_wrap{padding:30px 30px;}
 .data_both_row_wrap{display:flex;justify-content: flex-end;}
 .data_both_row{width:100%;display:flex;gap:20px;justify-content: flex-end;max-width:calc(100% - 100px)}
 .data_both_row .gap{flex:0 0 20px;}
@@ -71,7 +71,7 @@ input.form_input{}
 .render_data_table_row{flex:1;min-height:0;}
 
 /* timeline */
-.data_timeline_wrap{padding:27px 30px;}
+.data_timeline_wrap{padding:30px 30px;}
 .data_timeline_util_row{display:flex;justify-content: space-between;align-items: flex-end;margin-bottom:20px;}
 .data_timeline_guide_cols{}
 .data_timeline_guide_cols .data_timeline_guide_cols{}
@@ -104,7 +104,7 @@ input.form_calendar{width:140px;border:1px solid #c8c8c8;border-radius:7px;paddi
 .swiper-container.timeline-chart-container .swiper-wrapper{width:auto;height:auto;}
 .swiper-container.timeline-chart-container .swiper-slide{width:auto;height:auto;background:url("../images/bg_horline_last.png") repeat-y 100% 50%,url("../images/bg_horline.png");}
 .timeline-chart-scrollbar.swiper-scrollbar{width:100%;left:0;bottom:-22px;height:8px;position:absolute;background:#f5f5f5;}
-.swiper-scrollbar-drag{background:#d9d9d9;}
+.timeline-chart-scrollbar .swiper-scrollbar-drag{background:#d9d9d9;}
 
 .data_timeline_box_cols{flex:0 0 270px;display:flex;flex-direction: column;position:relative;z-index:5;}
 .timeline_summary_box{flex:1;display:flex;flex-direction: column;}
@@ -137,3 +137,44 @@ input.form_calendar{width:140px;border:1px solid #c8c8c8;border-radius:7px;paddi
 .cellgrid_unit_item_wrap{flex:1;display:flex;flex-direction: column;}
 .cellgrid_unit_item{flex:1;min-height:0;width:100%;height:100%;display:flex;flex-direction: column;box-sizing: border-box;}
 .cellgrid_unit_row{flex:0 0 90px;box-sizing: border-box;}
+
+
+.data_table_zone{display:flex;flex-direction:column;gap:20px;box-sizing: border-box;position:absolute;top:30px;left:30px;width:calc(100% - 60px);height:calc(100% - 60px)}
+.data_table_sort_wrap{flex:0;display:flex;justify-content: space-between;align-items: flex-end;}
+.data_sort_main_cols{}
+.data_sort_sub_cols{display:flex;align-items: center;gap:10px;}
+.data_sort_sub_cols .chart_guide_item_list{}
+.box_dtab_list{display:flex;border:1px solid #3f4858;position:relative;border-radius:10px 0 10px 0;overflow:hidden;}
+.box_dtab_list > li{}
+.box_dtab_list > li:last-of-type{}
+.box_dtab{display:flex;justify-content:center;align-items:center;font-size:16px;font-weight:500;color:#3f4858;font-weight:500;min-width:220px;padding:12px;box-sizing: border-box;}
+.box_dtab.active{background:#3f4858;color:#fff;}
+
+.data_table_render_wrap{flex:1;overflow:hidden;min-height:0;display:flex;flex-direction: column;}
+.data_table_thead_row{position:relative;overflow:hidden;border-radius:3px;}
+.data_thead_table{width:100%;table-layout: fixed;}
+.data_thead_table th{background:#59687f;padding:10px;border-right:1px solid #707c8f;}
+.data_thead_table th:last-of-type{border-right:0;}
+.data_thead_table th[rowspan]{border-left:1px solid #707c8f;}
+.data_thead_table th[colspan]{border-bottom:1px solid #707c8f;}
+.data_thtext{font-size:16px;display:inline-block;color:#fff;line-height:1.2;}
+.data_table_tbody_row{flex:1;overflow:hidden;min-height:0;}
+.swiper-container.swiper-tbody-scroll{height:100%;}
+.swiper-container.swiper-tbody-scroll .swiper-wrapper{width:auto;height:auto;}
+.swiper-container.swiper-tbody-scroll .swiper-slide{width:auto;height:auto;}
+.data_tbody_table{width:100%;table-layout: fixed;}
+.data_tbody_table td{border-bottom:1px solid #e7e7e7;padding:10px;}
+.data_tbody_table td:last-of-type{}
+.data_tdtext_group{}
+.data_tdtext_mark_cols{}
+.data_tdtext_text_cols{}
+.data_tdtext_text_cols .data_tdtext{}
+.data_tdtext{display:inline-block;font-size:15px;color:#4e4e4e;line-height:1.2;}
+
+.swiper-wrapper.disabled {
+    transform: translate3d(0px, 0, 0) !important;
+}
+
+
+.swiper-tbody-scroll .swiper-scrollbar{width:8px;background:#f5f5f5;}
+.swiper-tbody-scroll .swiper-scrollbar-drag{background:#d9d9d9;}
