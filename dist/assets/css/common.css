@@ -3353,6 +3353,7 @@ input.form_calendar {
   top: 0;
   left: 0;
   border-left: 1px solid #d9d9d9;
+  border-radius: 50px;
 }
 
 .timeline_label_box_vitem {
@@ -3492,6 +3493,10 @@ input.form_calendar {
   min-height: 26px;
 }
 
+.timeline_summary_title_row i.up {
+  background-image: url("../images/ico_plane_go.png");
+}
+
 .timeline_summary_title {
   flex: 1;
   text-align: center;
@@ -3510,6 +3515,8 @@ input.form_calendar {
   border: 1px solid #8690a0;
   border-top: 0;
   background: #fafafa;
+  overflow: auto;
+  position: relative;
 }
 
 .timeline_summary_else {
@@ -3520,6 +3527,7 @@ input.form_calendar {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #fff;
 }
 
 .timeline_summary_else_text {
@@ -3532,6 +3540,48 @@ input.form_calendar {
   height: 100%;
   min-width: 100%;
   display: flex;
+}
+
+.timeline_summary_data_list {
+  display: table;
+  margin: 0 auto;
+  padding-top: 16px;
+}
+.timeline_summary_data_list > li {
+  margin-bottom: 15px;
+}
+.timeline_summary_data_list > li:last-of-type {
+  margin-bottom: 0;
+}
+
+.timeline_summary_status_list {
+  margin: 20px auto 0;
+  display: table;
+}
+.timeline_summary_data {
+  display: flex;
+  gap: 17px;
+}
+.timeline_summary_key {
+  display: inline-block;
+  text-align: center;
+  min-width: 86px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+  background: #fff;
+  border: 1px solid #b5b5b5;
+  border-radius: 8px 0 8px 0;
+  box-sizing: border-box;
+  padding: 8px 8px 7px 8px;
+  line-height: 1;
+}
+
+.timeline_summary_value {
+  padding: 6px 0;
+  display: inline-block;
+  color: #000000;
+  font-size: 16px;
 }
 
 .time_unit_list_wrap {
@@ -4129,6 +4179,7 @@ input.paging_input {
 }
 .status_item:first-of-type:before {
   display: block;
+  background-position: 100% 0;
 }
 .status_item:last-of-type:after {
   background-image: url("../images/item_step_head_white_front.png");
@@ -4151,7 +4202,7 @@ input.paging_input {
 }
 
 .status_item_text {
-  padding: 0 18px 0 7px;
+  padding: 0 16px 0 5px;
   white-space: nowrap;
   background: url("../images/item_step_bg_white.png") repeat-x 0 0;
   height: 34px;
@@ -4180,6 +4231,19 @@ input.paging_input {
   top: 2px;
   right: 0;
   z-index: 0;
+}
+
+.timeline_summary_content_row .status_item:first-of-type:before {
+  background-image: url("../images/ist_white_bg_gray.png");
+}
+.timeline_summary_content_row .status_item:last-of-type:after {
+  background-image: url("../images/ish_white_bg_gray.png");
+}
+.timeline_summary_content_row .status_item.active:first-of-type:before {
+  background-image: url("../images/ist_blue_bg_gray.png");
+}
+.timeline_summary_content_row .status_item.active:last-of-type:after {
+  background-image: url("../images/ish_blue_bg_gray.png") !important;
 }
 
 /* chart */
