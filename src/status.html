@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/_head.html')
+<body class="front_body">
+	<div class="page_wrap">
+		@@include('./include/_header.html')
+		<section class="middle_wrap">
+			<div style="margin:50px;">
+				<!-- status -->
+				<div class="status_item_list">
+					<div class="status_item">
+						<span class="status_item_text">IBK</span>
+					</div>
+					<div class="status_item">
+						<span class="status_item_text">INI</span>
+					</div>
+					<div class="status_item">
+						<span class="status_item_text">RDY</span>
+					</div>
+					<div class="status_item">
+						<span class="status_item_text">TAX</span>
+					</div>
+					<div class="status_item">
+						<span class="status_item_text">AIR</span>
+					</div>
+				</div>
+				<!-- // status  -->
+			</div>
+		</section>
+		<footer class="footer_wrap">
+			<div class="footer_main_item">
+				<span class="footer_copy">caution alert : uam0123 aldt not received(tldt +3 min)</span>
+			</div>
+			<div class="footer_layer_item"><span class="footer_bottom_logo"><img src="./assets/images/footer_logo.png" alt="neighbor system"></span></div>
+		</footer>
+		<script>
+			menuRock("#nav_01");
+
+			// 퍼블확인용
+			let url = window.location.href.split('?')[1];
+			let url_2 = url !== undefined ? url.split('#')[0] : null;
+			if(url_2 === "loading"){
+				document.querySelector(".loading_layer").classList.add("active");
+			}
+		</script>
+	</div>
+</body>
+</html>
