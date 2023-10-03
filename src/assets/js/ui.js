@@ -449,3 +449,22 @@ function tableScrollFunc(target){
     }
   }
 }
+
+
+function canvasChart(){
+  const draw03 = document.querySelector(".draw03");
+  const linechart_cols_down = document.querySelectorAll(".linechart_cols.line_down_start");
+  
+  action();
+  window.addEventListener("resize",()=>{
+    action();
+  });
+
+  function action(){
+    let linechart_wid = 0;
+    linechart_cols_down.forEach((item)=>{
+      linechart_wid += item.getBoundingClientRect().width;
+    });
+    draw03.style.width = linechart_wid + 'px';
+  }
+}

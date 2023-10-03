@@ -346,6 +346,73 @@ input.paging_input{border:1px solid #e7e7e7;width:50px;height:30px;text-align: c
     }
 }
 
+/* chart */
+.diagram_data_wrap{}
+.linechart_zone{position:relative;}
+.linechart_canvas{width:100%;height:100%;position:absolute;top:0;left:0;}
+.linechart_line{
+    display:none;position:absolute;top:54px;left:0;height:2px;background:#5b779d;width:100%;
+    &.draw01{width:360px;display:block;}
+    &.draw02{width:150px;left:360px;transform:rotate(33deg);transform-origin: 0 0;display:block;}
+    &.draw03{width:360px;display:block;left:480px;top:129px;}
+    &.draw04{width:150px;left:auto;right:240px;transform:rotate(-33deg);transform-origin: 100% 100%;display:block;}
+    &.draw05{width:120px;display:block;left:auto;right:0;width:240px}
+}
+.linechart_wrap{display:flex;height:140px;position:relative;}
+.linechart_cols{flex:0 0 120px;position:relative;
+    &.long{
+        flex:1;
+    }
+    &.down{
+        .linechart_dot_wrap{top:120px}
+    }
+}
+.linechart_dot_wrap{
+    width:20px;height:20px;position:absolute;top:45px;right:0;transform:translateX(50%);
+    &.skin2{
+        .linechart_dot{background:#fff;}
+        .linechart_text{}
+    }
+}
+.linechart_dot{
+    width:16px;height:16px;background:#f0faff;border:2px solid #9dc3e6;border-radius:100%;display:block;
+    &:before{display:block;content:'';width:1px;height:200px;background:#cecece;position:absolute;top:20px;left:50%;transform: translateX(-50%);}
+
+}
+.linechart_text{white-space: nowrap;display:inline-block;text-align:center;color:#2d2d2d;position:absolute;bottom:27px;left:50%;transform: translateX(-50%);}
+
+.linestatus_zone{
+    margin-top:35px; position:relative;
+}
+.line_status_item_list{display:flex;}
+.line_status_item{
+    text-align: center;
+    flex:0 0 120px; display:flex;
+    &.active{
+        &:before{background-image:url("../images/line_chart_tail_blue.png");}
+        &:after{background-image:url("../images/line_chart_head_blue.png");}  
+        .line_status_item_text{background-image:url("../images/line_chart_body_bg_blue.png")}
+    }
+    &:before,
+    &:after{display:block;content:'';width:20px;height:34px;background-position:0 0;background-repeat:no-repeat;}
+    &:before{background-image:url("../images/line_chart_tail_white.png");}
+    &:after{background-image:url("../images/line_chart_head_white.png");}
+
+    &.wid2{flex:0 0 240px;}
+    &.wid_long{flex:1;}
+}
+.line_status_item_text{flex:1;display:flex;background:url("../images/line_chart_body_bg_white.png") repeat-x 0 0;align-items: center;justify-content: center;}
+.linechart_tb_zone{position:relative;background:#fff;margin-top:25px;}
+.linechart_tb{}
+.linechart_tb_cols{}
+.linechart_dl_tb{
+    &.long{}
+    dt,dd{}
+}
+.linechart_thtext{}
+.linechart_tdtext{}
+/* // chart */
+
 @media (max-width:1680px){
     .data_table_zone.respon_type {
         .data_table_render_wrap{
@@ -361,6 +428,47 @@ input.paging_input{border:1px solid #e7e7e7;width:50px;height:30px;text-align: c
             .data_table_tbody_row{min-width:1680px;}
         }
     }
+}
+@media (max-width:1440px){
+     /* chart */
+     .linechart_line{
+        &.draw01{width:240px;display:block;}
+        &.draw02{width:110px;left:240px;transform:rotate(43deg);}
+        &.draw03{width:360px;display:block;left:320px;top:129px;}
+        &.draw04{width:110px;right:160px;transform:rotate(-43deg);}
+        &.draw05{width:80px;display:block;left:auto;right:0;width:160px}
+    }
+    .linechart_wrap{display:flex;height:140px;position:relative;}
+    .linechart_cols{flex:0 0 80px;position:relative;
+        &.long{
+            flex:1;
+        }
+        &.down{
+            .linechart_dot_wrap{top:120px}
+        }
+    }
+    .linechart_dot_wrap{
+        width:20px;height:20px;position:absolute;top:45px;right:0;transform:translateX(50%);
+        &.skin2{
+            .linechart_dot{background:#fff;}
+            .linechart_text{}
+        }
+    }
+    .linechart_dot{
+        width:16px;height:16px;background:#f0faff;border:2px solid #9dc3e6;border-radius:100%;display:block;
+        &:before{display:block;content:'';width:1px;height:160px;background:#cecece;position:absolute;top:20px;left:50%;transform: translateX(-50%);}
+
+    }
+    .linechart_text{bottom:27px;font-size:14px;}
+
+    
+    .line_status_item{
+        flex:0 0 80px; 
+    
+        &.wid2{flex:0 0 160px;}
+        &.wid_long{flex:1;}
+    }
+    .line_status_item_text{font-size:14px;}
 }
 
 @media (max-width:1280px){
