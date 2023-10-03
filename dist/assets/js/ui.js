@@ -409,7 +409,7 @@ function timeLineFunc() {
       threshold: 0,
       touchReleaseOnEdges: true,
       snapGrid: 0,
-      mousewheel: true,
+      //mousewheel: true,
       scrollbar: {
         el: ".timeline-chart-scrollbar"
       }
@@ -468,5 +468,38 @@ function canvasChart() {
       linechart_wid += item.getBoundingClientRect().width;
     });
     draw03.style.width = linechart_wid + 'px';
+  }
+}
+
+
+function responTableFunc() {
+  const render_data_table_row = document.querySelectorAll(".render_data_table_row");
+
+  action();
+  window.addEventListener("resize", () => {
+    action();
+  });
+
+  function action() {
+    if (!!render_data_table_row) {
+      render_data_table_row.forEach((item) => {
+        const thisItem = item;
+        const thisDataTr = thisItem.querySelectorAll(".data_tr");
+        let maxTr = [];
+
+        thisDataTr.forEach((item) => {
+          item.removeAttribute("style");
+        });
+
+        thisDataTr.forEach((item) => {
+          maxTr.push(item.getBoundingClientRect().height)
+        });
+
+        thisDataTr.forEach((item) => {
+          item.style.height = Math.max.apply(null, maxTr) + 'px';
+        });
+
+      });
+    }
   }
 }
