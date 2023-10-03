@@ -1232,7 +1232,6 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   flex: 1;
   min-height: 0;
   position: relative;
-  overflow: hidden;
   overflow-y: overlay;
   padding: 30px 30px 40px;
 }
@@ -3980,6 +3979,11 @@ input.form_calendar {
 
 .diagram_data_wrap {
   margin-top: 40px;
+  min-width: 1100px;
+  position: relative;
+  overflow: hidden;
+  overflow-x: auto;
+  padding-bottom: 1px;
 }
 
 .viewer_tdtext_cols {
@@ -4346,7 +4350,7 @@ input.paging_input {
   position: absolute;
   top: 20px;
   left: 50%;
-  transform: translateX(-50%);
+  margin-left: -1px;
 }
 
 .linechart_text {
@@ -4416,6 +4420,53 @@ input.paging_input {
   position: relative;
   background: #fff;
   margin-top: 25px;
+  text-align: center;
+}
+
+.linechart_tb {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -1px;
+}
+.linechart_tb_cols {
+  flex: 0 0 120px;
+  display: flex;
+  justify-content: center;
+}
+.linechart_tb_cols.long {
+  flex: 1;
+}
+.linechart_tb_cols.wid2 {
+  flex: 0 0 240px;
+}
+.linechart_tb_cols.first .linechart_dl_tb:first-of-type dt,
+.linechart_tb_cols.first .linechart_dl_tb:first-of-type dd {
+  border-left: 1px solid #d9d9d9;
+}
+
+.linechart_dl_tb {
+  flex: 1;
+  border-top: 1px solid #3d4758;
+}
+.linechart_dl_tb.short {
+  flex: 0 0 30%;
+}
+.linechart_dl_tb dt {
+  background: #f4f4f4;
+  border-right: 1px solid #d9d9d9;
+  padding: 10px 0;
+}
+.linechart_dl_tb dd {
+  border: 1px solid #d9d9d9;
+  border-left: 0;
+  padding: 10px 0;
+}
+.linechart_thtext,
+.linechart_tdtext {
+  font-weight: 500;
+  color: #333333;
+  font-size: 16px;
+  display: inline-block;
 }
 
 /* // chart */
@@ -4436,31 +4487,31 @@ input.paging_input {
 @media (max-width: 1440px) {
   /* chart */
   .linechart_line.draw01 {
-    width: 240px;
+    width: 300px;
     display: block;
   }
   .linechart_line.draw02 {
-    width: 110px;
-    left: 240px;
-    transform: rotate(43deg);
+    width: 120px;
+    left: 300px;
+    transform: rotate(38deg);
   }
   .linechart_line.draw03 {
-    width: 360px;
+    width: 400px;
     display: block;
-    left: 320px;
+    left: 400px;
     top: 129px;
   }
   .linechart_line.draw04 {
-    width: 110px;
-    right: 160px;
-    transform: rotate(-43deg);
+    width: 120px;
+    right: 200px;
+    transform: rotate(-38deg);
   }
   .linechart_line.draw05 {
-    width: 80px;
+    width: 100px;
     display: block;
     left: auto;
     right: 0;
-    width: 160px;
+    width: 200px;
   }
   .linechart_wrap {
     display: flex;
@@ -4468,7 +4519,7 @@ input.paging_input {
     position: relative;
   }
   .linechart_cols {
-    flex: 0 0 80px;
+    flex: 0 0 100px;
     position: relative;
   }
   .linechart_cols.long {
@@ -4497,30 +4548,32 @@ input.paging_input {
     display: block;
   }
   .linechart_dot:before {
-    display: block;
-    content: "";
-    width: 1px;
-    height: 160px;
-    background: #cecece;
-    position: absolute;
     top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
   }
   .linechart_text {
     bottom: 27px;
     font-size: 14px;
   }
   .line_status_item {
-    flex: 0 0 80px;
+    flex: 0 0 100px;
   }
   .line_status_item.wid2 {
-    flex: 0 0 160px;
+    flex: 0 0 200px;
   }
   .line_status_item.wid_long {
     flex: 1;
   }
   .line_status_item_text {
+    font-size: 14px;
+  }
+  .linechart_tb_cols {
+    flex: 0 0 100px;
+  }
+  .linechart_tb_cols.wid2 {
+    flex: 0 0 200px;
+  }
+  .linechart_thtext,
+.linechart_tdtext {
     font-size: 14px;
   }
 }

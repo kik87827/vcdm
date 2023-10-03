@@ -109,7 +109,7 @@ html:not(.touchmode) {
 
 .btn_popup_close{display:block;width:36px;height:36px;background:url("../images/ic_popup_close@2x.png") no-repeat 50% 50%/14px auto;position:absolute;top:15px;right:23px;}
 
-.popup_content_row{flex:1;min-height:0;position:relative;overflow:hidden;overflow-y:overlay;padding:30px 30px 40px;}
+.popup_content_row{flex:1;min-height:0;position:relative;overflow-y:overlay;padding:30px 30px 40px;}
 
 .popup_footer_row{flex:0 0 40px;display:flex;justify-content: flex-end;position:relative;padding:0 30px;align-items: center;border-top:1px solid #e7e7e7;box-sizing: border-box;}
 
