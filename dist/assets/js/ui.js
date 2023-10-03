@@ -193,8 +193,7 @@ DesignPopup.prototype.bindEvent = function() {
   // this.selector.querySelector(".popup_content_row").addEventListener("scroll",(e)=>{
   //   console.log(this.selector.querySelector(".popup_content_row").scrollTop)
   // });
-
-  if (!!this.btn_closeTrigger) {
+  if (!!this.selector.querySelectorAll(".close_trigger")) {
     this.btn_closeTrigger = this.selector.querySelectorAll(".close_trigger");
     closeItemArray.push(...this.btn_closeTrigger);
   }
@@ -433,7 +432,8 @@ function tableScrollFunc(target) {
       slidesPerView: "auto",
       freeMode: true,
       scrollbar: {
-        el: target + " .swiper-scrollbar"
+        el: target + " .swiper-scrollbar",
+        hide: true
       },
       mousewheel: true
     });
@@ -444,7 +444,6 @@ function tableScrollFunc(target) {
   disabledFunc();
 
   function disabledFunc() {
-    console.log(targetDomSlide.getBoundingClientRect().height);
     if (targetDomScroll.getBoundingClientRect().height > targetDomWrapper.getBoundingClientRect().height) {
       targetDomWrapper.classList.add("disabled");
     } else {

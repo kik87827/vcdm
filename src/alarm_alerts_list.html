@@ -4,8 +4,247 @@
 <body class="front_body">
 	<div class="page_wrap">
 		@@include('./include/_header.html')
-		<section class="middle_wrap">
-			내용이 들어갑니다.
+		<section class="middle_wrap type2">
+			<div class="data_table_zone type2" id="data_table_zone_target">
+				<div class="data_table_sort_wrap">
+					<div class="data_sort_main_cols">
+						<p class="block_title">ALERTS LIST</p>
+					</div>	
+					<div class="data_sort_sub_cols">
+						<ul class="chart_guide_item_list">
+							<li>
+								<div class="chart_guide_item">
+									<i class="chart_guide_bullet" style="background-color:#fff;border-color:#d8d8d8;"></i>
+									<span class="chart_guide_value">운항예정</span>
+								</div>
+							</li>
+							<li>
+								<div class="chart_guide_item">
+									<i class="chart_guide_bullet" style="background-color:#34be74;border-color:#34be74;"></i>
+									<span class="chart_guide_value">운항중</span>
+								</div>
+							</li>
+							<li>
+								<div class="chart_guide_item">
+									<i class="chart_guide_bullet" style="background-color:#ffc000;border-color:#ffc000;"></i>
+									<span class="chart_guide_value">Caution Alert 발생</span>
+								</div>
+							</li>
+							<li>
+								<div class="chart_guide_item">
+									<i class="chart_guide_bullet" style="background-color:#ff6060;border-color:#ff6060;"></i>
+									<span class="chart_guide_value">Warning Alert 발생</span>
+								</div>
+							</li>
+							<li>
+								<div class="chart_guide_item">
+									<i class="chart_guide_bullet" style="background-color:#eff7ff;border-color:#d8d8d8;"></i>
+									<span class="chart_guide_value">운항완료</span>
+								</div>
+							</li>
+						</ul>
+						<input type="text" class="form_calendar" value="2023-02-20">
+					</div>
+				</div>
+				<div class="data_table_render_wrap">
+					<div class="data_table_thead_row">
+						<table class="data_thead_table">
+							<colgroup>
+								<col style="width:6%;" />
+								<col style="width:8%;" />
+								<col style="width:7%;" />
+
+								<col style="width:9%;" />
+								<col style="width:14%;" />
+								<col style="width:8%;" />
+								
+								<col />
+								<col style="width:17%;" />
+								<col style="width:40px;" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th><span class="data_thtext">No.</span></th>
+									<th><span class="data_thtext">ID</span></th>
+									<th><span class="data_thtext">구분</span></th>
+									<th><span class="data_thtext">FLT</span></th>
+									<th><span class="data_thtext">RAISED</span></th>
+									<th><span class="data_thtext">FLT STS</span></th>
+									<th><span class="data_thtext">DESCRIPTION</span></th>
+									<th><span class="data_thtext">ACKNOWLEDGE</span></th>
+									<th></th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="data_table_tbody_row">
+						<div class="swiper-container swiper-tbody-scroll">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<table class="data_tbody_table">
+										<colgroup>
+											<col style="width:6%;" />
+											<col style="width:8%;" />
+											<col style="width:7%;" />
+											<col style="width:9%;" />
+											<col style="width:14%;" />
+											<col style="width:8%;" />
+											<col />
+											<col style="width:17%;" />
+											<col style="width:40px;" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<td><span class="data_tdtext">8</span></td>
+												<td><span class="data_tdtext">W004</span></td>
+												<td><span class="data_tdtext">DEP</span></td>
+												<td><span class="data_tdtext">UAM0123</span></td>
+												<td><span class="data_tdtext">2023-03-24 15:00</span></td>
+												<td><span class="data_tdtext">INI</span></td>
+												<td><span class="data_tdtext">WARNING (ETOT-TTOT)</span></td>
+												<td><a href="#" class="btn_data_current type2">Acknowledge</a></td>
+												<td>
+													<span class="data_current_box" style="background-color:#ff6060;"></span>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="data_tdtext">8</span></td>
+												<td><span class="data_tdtext">W004</span></td>
+												<td><span class="data_tdtext">DEP</span></td>
+												<td><span class="data_tdtext">UAM0123</span></td>
+												<td><span class="data_tdtext">2023-03-24 15:00</span></td>
+												<td><span class="data_tdtext">INI</span></td>
+												<td><span class="data_tdtext">WARNING (ETOT-TTOT)</span></td>
+												<td><a href="#" class="btn_data_current type2">Acknowledge</a></td>
+												<td>
+													<span class="data_current_box" style="background-color:#ff6060;"></span>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="data_tdtext">8</span></td>
+												<td><span class="data_tdtext">W004</span></td>
+												<td><span class="data_tdtext">DEP</span></td>
+												<td><span class="data_tdtext">UAM0123</span></td>
+												<td><span class="data_tdtext">2023-03-24 15:00</span></td>
+												<td><span class="data_tdtext">INI</span></td>
+												<td><span class="data_tdtext">WARNING (ETOT-TTOT)</span></td>
+												<td><a href="#" class="btn_data_current type2">Acknowledge</a></td>
+												<td>
+													<span class="data_current_box" style="background-color:#ff6060;"></span>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="data_tdtext">8</span></td>
+												<td><span class="data_tdtext">W004</span></td>
+												<td><span class="data_tdtext">DEP</span></td>
+												<td><span class="data_tdtext">UAM0123</span></td>
+												<td><span class="data_tdtext">2023-03-24 15:00</span></td>
+												<td><span class="data_tdtext">INI</span></td>
+												<td><span class="data_tdtext">WARNING (ETOT-TTOT)</span></td>
+												<td><span class="data_tdtext">CLOSED</span></td>
+												<td>
+													<span class="data_current_box" style="background-color:#ff6060;"></span>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="data_tdtext">8</span></td>
+												<td><span class="data_tdtext">W004</span></td>
+												<td><span class="data_tdtext">DEP</span></td>
+												<td><span class="data_tdtext">UAM0123</span></td>
+												<td><span class="data_tdtext">2023-03-24 15:00</span></td>
+												<td><span class="data_tdtext">INI</span></td>
+												<td><span class="data_tdtext">WARNING (ETOT-TTOT)</span></td>
+												<td><span class="data_tdtext">CLOSED</span></td>
+												<td>
+													<span class="data_current_box" style="background-color:#ffc000;"></span>
+												</td>
+											</tr>
+											<tr>
+												<td><span class="data_tdtext">8</span></td>
+												<td><span class="data_tdtext">W004</span></td>
+												<td><span class="data_tdtext">DEP</span></td>
+												<td><span class="data_tdtext">UAM0123</span></td>
+												<td><span class="data_tdtext">2023-03-24 15:00</span></td>
+												<td><span class="data_tdtext">INI</span></td>
+												<td><span class="data_tdtext">WARNING (ETOT-TTOT)</span></td>
+												<td><span class="data_tdtext">CLOSED</span></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td><span class="data_tdtext">8</span></td>
+												<td><span class="data_tdtext">W004</span></td>
+												<td><span class="data_tdtext">DEP</span></td>
+												<td><span class="data_tdtext">UAM0123</span></td>
+												<td><span class="data_tdtext">2023-03-24 15:00</span></td>
+												<td><span class="data_tdtext">INI</span></td>
+												<td><span class="data_tdtext">WARNING (ETOT-TTOT)</span></td>
+												<td><span class="data_tdtext">CLOSED</span></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td><span class="data_tdtext">8</span></td>
+												<td><span class="data_tdtext">W004</span></td>
+												<td><span class="data_tdtext">DEP</span></td>
+												<td><span class="data_tdtext">UAM0123</span></td>
+												<td><span class="data_tdtext">2023-03-24 15:00</span></td>
+												<td><span class="data_tdtext">INI</span></td>
+												<td><span class="data_tdtext">WARNING (ETOT-TTOT)</span></td>
+												<td><span class="data_tdtext">CLOSED</span></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td><span class="data_tdtext">8</span></td>
+												<td><span class="data_tdtext">W004</span></td>
+												<td><span class="data_tdtext">DEP</span></td>
+												<td><span class="data_tdtext">UAM0123</span></td>
+												<td><span class="data_tdtext">2023-03-24 15:00</span></td>
+												<td><span class="data_tdtext">INI</span></td>
+												<td><span class="data_tdtext">WARNING (ETOT-TTOT)</span></td>
+												<td><span class="data_tdtext">CLOSED</span></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td><span class="data_tdtext">8</span></td>
+												<td><span class="data_tdtext">W004</span></td>
+												<td><span class="data_tdtext">DEP</span></td>
+												<td><span class="data_tdtext">UAM0123</span></td>
+												<td><span class="data_tdtext">2023-03-24 15:00</span></td>
+												<td><span class="data_tdtext">INI</span></td>
+												<td><span class="data_tdtext">WARNING (ETOT-TTOT)</span></td>
+												<td><span class="data_tdtext">CLOSED</span></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td><span class="data_tdtext">8</span></td>
+												<td><span class="data_tdtext">W004</span></td>
+												<td><span class="data_tdtext">DEP</span></td>
+												<td><span class="data_tdtext">UAM0123</span></td>
+												<td><span class="data_tdtext">2023-03-24 15:00</span></td>
+												<td><span class="data_tdtext">INI</span></td>
+												<td><span class="data_tdtext">WARNING (ETOT-TTOT)</span></td>
+												<td><span class="data_tdtext">CLOSED</span></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td><span class="data_tdtext">8</span></td>
+												<td><span class="data_tdtext">W004</span></td>
+												<td><span class="data_tdtext">DEP</span></td>
+												<td><span class="data_tdtext">UAM0123</span></td>
+												<td><span class="data_tdtext">2023-03-24 15:00</span></td>
+												<td><span class="data_tdtext">INI</span></td>
+												<td><span class="data_tdtext">WARNING (ETOT-TTOT)</span></td>
+												<td><span class="data_tdtext">CLOSED</span></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="swiper-scrollbar"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 		<footer class="footer_wrap">
 			<div class="footer_main_item">
@@ -35,6 +274,8 @@
 		</div>
 		<script>
 			menuRock("#nav_04");
+
+			tableScrollFunc("#data_table_zone_target");
 
 			// 퍼블확인용
 			let url = window.location.href.split('?')[1];
