@@ -222,6 +222,11 @@ input:-webkit-autofill {
   color: #f35413 !important;
 }
 
+.emp_cbold {
+  font-weight: 700;
+  color: #176bdd !important;
+}
+
 .bsym,
 .bsym * {
   font-weight: 500;
@@ -935,6 +940,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 
 .header_wrap {
   flex: 0;
+  box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.06);
 }
 
 .hgroup_wrap {
@@ -1014,6 +1020,11 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   height: 64px;
   position: relative;
   padding: 0 8.3333333333%;
+}
+.nav_list_wrap.type2 .nav_one:after {
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav_list_wrap:before {
@@ -1133,6 +1144,11 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   flex-direction: column;
 }
 
+@media (max-width: 1440px) {
+  .nav_list_wrap.type2 .nav_one:after {
+    width: 60%;
+  }
+}
 /* 공통 popup */
 .popup_wrap {
   position: fixed;
@@ -1157,9 +1173,6 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 }
 .popup_wrap.motion_end {
   opacity: 1;
-}
-.popup_wrap .popup_item.size_small {
-  max-width: 830px;
 }
 .popup_wrap.skin2 .popup_title_low {
   border-bottom: 1px solid #ddd;
@@ -1187,6 +1200,12 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 }
 .popup_item.type2 {
   height: calc(100% - 80px);
+}
+.popup_item.size_small {
+  max-width: 820px;
+}
+.popup_item.size_xsmall {
+  max-width: 445px;
 }
 
 .layer_wrap_parent.has_active_multi .bg_dim {
@@ -1233,6 +1252,9 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   position: relative;
   overflow-y: overlay;
   padding: 30px 30px 40px;
+}
+.popup_content_row.notitle {
+  padding: 65px 30px 30px;
 }
 
 .popup_footer_row {
@@ -1347,7 +1369,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   color: #3f4858;
   line-height: 1;
   position: relative;
-  top: 1px;
+  top: 0;
 }
 
 .boxtab.active {
@@ -3932,7 +3954,7 @@ input.form_calendar {
   color: #3f4858;
   font-weight: 500;
   min-width: 220px;
-  padding: 12px;
+  padding: 10px;
   box-sizing: border-box;
 }
 
@@ -3959,25 +3981,23 @@ input.form_calendar {
   width: 100%;
   table-layout: fixed;
 }
-
 .data_thead_table th {
-  background: #59687f;
-  padding: 14px 0;
+  background: #59687f; /* padding:6px 0; */
+  padding: 13px 0;
   border-right: 1px solid #707c8f;
 }
-
 .data_thead_table th:last-of-type {
   border-right: 0;
 }
-
 .data_thead_table th[rowspan] {
   border-left: 1px solid #707c8f;
 }
-
 .data_thead_table th[colspan] {
   border-bottom: 1px solid #707c8f;
 }
-
+.data_thead_table.ptype2 th {
+  padding: 6px 0;
+}
 .data_thead_table.skin2 th {
   border-color: #7ca8e3;
   background: #5b92dc;
@@ -3986,6 +4006,12 @@ input.form_calendar {
 .data_single_table {
   width: 100%;
   table-layout: fixed;
+}
+.data_single_table thead th:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+.data_single_table thead th:last-of-type {
+  border-radius: 0 4px 4px 0;
 }
 .data_single_table th {
   background: #59687f;
@@ -4058,6 +4084,8 @@ input.form_calendar {
 }
 .data_tbody_table td.has_status {
   padding: 0;
+  font-size: 0;
+  line-height: 0;
 }
 .data_tbody_table.skin2 td {
   border-right: 1px solid #e7e7e7;
@@ -4065,11 +4093,17 @@ input.form_calendar {
 .data_tbody_table.skin2 td:last-of-type {
   border-right: 0;
 }
+.data_tbody_table tr:hover td {
+  background: #f4fbff;
+}
 
 .data_tdtext_group {
   display: inline-flex;
   gap: 20px;
   align-items: center;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: middle;
 }
 
 .data_tdtext_mark {
@@ -4421,8 +4455,21 @@ input.paging_input {
   display: block;
   background-position: 100% 0;
 }
+.status_item:last-of-type {
+  margin-right: 0;
+}
 .status_item:last-of-type:after {
-  background-image: url("../images/item_step_head_white_front.png");
+  background-image: url("../images/item_step_head_white.png");
+  transform: translate(0, 0);
+}
+.status_item:last-of-type .status_item_text {
+  padding-right: 0;
+}
+.status_item:last-of-type .status_item_text:before {
+  display: none;
+}
+.status_item:last-of-type .status_item_text:after {
+  display: none;
 }
 .status_item.active .status_item_text {
   background-image: url("../images/item_step_bg_blue.png");
@@ -4437,8 +4484,14 @@ input.paging_input {
 .status_item.active:after {
   background-image: url("../images/item_step_head_blue.png");
 }
+.status_item.active:first-of-type .status_item_text:before {
+  display: none;
+}
+.status_item.active:first-of-type:before {
+  background-image: url("../images/item_step_tail_blue_trans.png") !important;
+}
 .status_item.active:last-of-type:after {
-  background-image: url("../images/item_step_head_active_last.png") !important;
+  background-image: url("../images/item_step_head_blue.png") !important;
 }
 
 .status_item_text {

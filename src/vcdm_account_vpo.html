@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/_head.html')
+<body class="front_body">
+	<div class="page_wrap">
+		@@include('./include/_header3.html')
+		<section class="middle_wrap">
+			내용이 들어갑니다.
+		</section>
+		@@include('./include/_footer.html')
+
+
+		<!-- popup -->
+		<div class="popup_wrap" id="addPopup">
+			<div class="bg_dim"></div>
+			<div class="popup_item size_xsmall">
+				<div class="popup_content_row notitle">
+					내용이 들어갑니다.
+				</div>
+				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+			</div>
+		</div>
+		<div class="popup_wrap" id="confirmPopup">
+			<div class="bg_dim"></div>
+			<div class="popup_item size_xsmall">
+				<div class="popup_content_row notitle">
+					내용이 들어갑니다.2
+				</div>
+				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+			</div>
+		</div>
+		<!-- // popup -->
+
+		
+		<script>
+			menuRock("#nav_01");
+
+			// 선언
+			var addPopup = new DesignPopup({
+				selector: "#addPopup",
+				beforeCallback(){
+					console.log('beforeCallback');
+				},
+				callback(){
+					console.log('callback');
+				}
+			});
+			var confirmPopup = new DesignPopup({
+				selector: "#confirmPopup",
+				beforeCallback(){
+					console.log('beforeCallback');
+				},
+				callback(){
+					console.log('callback');
+				}
+			});
+			
+
+			// 퍼블확인용
+			let url = window.location.href.split('?')[1];
+			let url_2 = url !== undefined ? url.split('#')[0] : null;
+
+			if(url_2 === "add_popup"){
+				// show 호출
+				addPopup.popupShow();
+			}else if(url_2 === "confirm_popup"){
+				// show 호출
+				confirmPopup.popupShow();
+			}
+		</script>
+	</div>
+</body>
+</html>
