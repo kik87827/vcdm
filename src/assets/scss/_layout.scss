@@ -35,7 +35,7 @@ html:not(.touchmode) {
 .toplogo_link > img{vertical-align: middle;max-width:155px;}
 .toplogo_text{display:inline-block;border:1px solid #cecece;font-weight:500;border-radius:100px;color:#1b1b1b;line-height:1;padding:6px 12px;font-size:15px;}
 .hgroup_util_cols{display:flex;gap:12px;}
-.hgroup_util_text_list{display:flex;align-items: center;gap:10px;}
+.hgroup_util_text_list{display:flex;align-items: center;gap:10px;font-size:0;line-height:0;}
 .hgroup_util_text_list > li{}
 .hgroup_util_text_list > li:last-of-type{}
 .hgroup_util{color:#2b2b2b;display:inline-block;font-size:15px;line-height:1;}
@@ -63,7 +63,7 @@ html:not(.touchmode) {
 .footer_bottom_logo img{vertical-align: top;}
 .footer_wrap.type2{background:#fff;border-top-color:#e7e7e7;}
 
-.middle_wrap{min-height:0;flex:1;position:relative;}
+.middle_wrap{min-height:0;flex:1;position:relative;max-width:1920px;margin:0 auto;}
 .middle_wrap.type2{display:flex;flex-direction: column;}
   
 /* 공통 popup */
