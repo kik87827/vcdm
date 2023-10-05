@@ -2,8 +2,24 @@
 
 
 /* login */
-.cform_content_logo{}
-.cform_content_logo img{}
+.page_wrap{
+    &.center_form_wrap{
+        max-width:1920px;margin:0 auto;background:url("../images/bg_login.jpg") no-repeat 50% 0;
+    }
+}
+
+.cener_form_util_logo{
+    position:absolute;top:16px;left:16px;
+    img{max-width:198px;vertical-align: top;}
+}
+
+.cform_field_tb_title{font-size:24px;color:#fff;font-weight:700;text-align: center;line-height:1;}
+.cform_content_box{max-width:500px;margin:0 auto; padding:135px 30px;}  
+.cform_field_tb_wrap{background:rgba(0,0,0,.35);border-radius:4px;padding:30px 75px 35px;}
+
+
+.cform_content_logo{margin-bottom:85px;text-align: center;}
+.cform_content_logo img{vertical-align: top;}
 .cform_field_tb_wrap{}
 .cform_field_tb{}
 .cform_field_tr{}
