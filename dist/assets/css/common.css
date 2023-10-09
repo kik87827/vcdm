@@ -3044,7 +3044,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 .page_wrap.center_form_wrap {
   max-width: 1920px;
   margin: 0 auto;
-  background: url("../images/bg_login.jpg") no-repeat 50% 0;
+  background: url("../images/bg_login.jpg") no-repeat 50% 0/cover;
 }
 
 .cener_form_util_logo {
@@ -3063,10 +3063,11 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   font-weight: 700;
   text-align: center;
   line-height: 1;
+  margin-bottom: 24px;
 }
 
 .cform_content_box {
-  max-width: 500px;
+  max-width: 560px;
   margin: 0 auto;
   padding: 135px 30px;
 }
@@ -3081,11 +3082,19 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   margin-bottom: 85px;
   text-align: center;
 }
-
 .cform_content_logo img {
   vertical-align: top;
+  max-width: 211px;
 }
 
+@media (max-width: 1280px) {
+  .cform_content_logo {
+    margin: 0 auto 60px;
+  }
+  .cform_content_box {
+    padding: 80px 30px;
+  }
+}
 /* monitor */
 .data_grid_wrap {
   padding: 30px 30px;

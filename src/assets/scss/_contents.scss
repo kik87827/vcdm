@@ -4,7 +4,7 @@
 /* login */
 .page_wrap{
     &.center_form_wrap{
-        max-width:1920px;margin:0 auto;background:url("../images/bg_login.jpg") no-repeat 50% 0;
+        max-width:1920px;margin:0 auto;background:url("../images/bg_login.jpg") no-repeat 50% 0/cover;
     }
 }
 
@@ -13,13 +13,15 @@
     img{max-width:198px;vertical-align: top;}
 }
 
-.cform_field_tb_title{font-size:24px;color:#fff;font-weight:700;text-align: center;line-height:1;}
-.cform_content_box{max-width:500px;margin:0 auto; padding:135px 30px;}  
+.cform_field_tb_title{font-size:24px;color:#fff;font-weight:700;text-align: center;line-height:1;margin-bottom:24px;}
+.cform_content_box{max-width:560px;margin:0 auto; padding:135px 30px;}  
 .cform_field_tb_wrap{background:rgba(0,0,0,.35);border-radius:4px;padding:30px 75px 35px;}
 
 
-.cform_content_logo{margin-bottom:85px;text-align: center;}
-.cform_content_logo img{vertical-align: top;}
+.cform_content_logo{margin-bottom:85px;text-align: center;
+    img{vertical-align: top;max-width:211px;}
+}
+
 .cform_field_tb_wrap{}
 .cform_field_tb{}
 .cform_field_tr{}
@@ -32,6 +34,10 @@ input.form_input{}
 .btn_cform_submit_row{}
 .btn_cform_submit{}
 .btn_cform_submit_text{}
+@media (max-width:1280px){
+    .cform_content_logo{margin:0 auto 60px;}
+    .cform_content_box{padding:80px 30px;}  
+}
 
 /* monitor */
 .data_grid_wrap{padding:30px 30px;}
