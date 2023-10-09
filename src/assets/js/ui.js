@@ -121,6 +121,19 @@ DesignPopup.prototype.dimCheck = function () {
     this.layer_wrap_parent.classList.remove("has_active_multi");
   }
 };
+
+DesignPopup.prototype.scrollCheck = function () {
+  const popupContentRow = this.selector.querySelector(".popup_content_row");
+  const popupContentInner = this.selector.querySelector(".popup_content_inner");
+  console.dir(popupContentRow);
+  if(!!popupContentRow){
+    if(popupContentInner.getBoundingClientRect().height > popupContentRow.getBoundingClientRect().height){
+      popupContentRow.classList.add("scrollmode");
+    }else{
+      popupContentRow.classList.remove("scrollmode");
+    }
+  }
+};
 DesignPopup.prototype.popupShow = function () {
   this.design_popup_wrap_active =
     document.querySelectorAll(".popup_wrap.active");
@@ -133,14 +146,16 @@ DesignPopup.prototype.popupShow = function () {
   this.selector.classList.add("active");
   setTimeout(() => {
     this.selector.classList.add("motion_end");
+    this.scrollCheck();
+    if ("callback" in this.option) {
+      this.option.callback();
+    }
   }, 30);
   if ("beforeCallback" in this.option) {
     this.option.beforeCallback();
   }
 
-  if ("callback" in this.option) {
-    this.option.callback();
-  }
+  
   if (!!this.design_popup_wrap_active) {
     this.design_popup_wrap_active.forEach((element, index) => {
       if (this.design_popup_wrap_active !== this.selector) {
@@ -200,6 +215,11 @@ DesignPopup.prototype.bindEvent = function () {
   // if (!!this.bg_design_popup) {
   //   closeItemArray.push(this.bg_design_popup);
   // }
+
+  window.addEventListener("resize",()=>{
+    this.scrollCheck();
+  })
+
   if (closeItemArray.length) {
     closeItemArray.forEach((element) => {
       element.addEventListener(
@@ -417,12 +437,18 @@ function timeLineFunc(){
   }
 }
 
-function tableScrollFunc(target){
+function tableScrollFunc(target,rowcount){
   const targetDom = document.querySelector(target);
   const targetDomScroll = targetDom.querySelector(".swiper-tbody-scroll");
   const targetDomWrapper = targetDom.querySelector(".swiper-wrapper");
   const targetDomSlide = targetDom.querySelector(".swiper-slide");
+  let getcount = !!rowcount ? rowcount : 0;
+  let targetDomScrollTr = targetDomScroll.querySelectorAll("tr")[getcount];
   
+  if(!!rowcount && !!targetDomScrollTr){
+    targetDomScroll.style.height = (targetDomScrollTr.offsetTop) + "px";
+  }
+
   let swiperScroll = null;
   if(swiperScroll == null){
     swiperScroll = new Swiper(target+" .swiper-tbody-scroll", {

@@ -34,104 +34,132 @@
 					</div>
 				</div>
 				<div class="popup_content_row">
-					<!--  -->
-					<div class="data_single_table_wrap">
-						<table class="data_single_table skin2">
-							<colgroup>
-								<col style="width:7%;" />
-								<col />
-								<col style="width:22%;" />
-								<col style="width:22%;" />
-								<col style="width:22%;" />
-							</colgroup>
-							<thead>
-								<tr>
-									<th><span class="data_thtext">No.</span></th>
-									<th><span class="data_thtext">Event</span></th>
-									<th><span class="data_thtext">TIME</span></th>
-									<th><span class="data_thtext">VALUE</span></th>
-									<th><span class="data_thtext">SOURCE</span></th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><span class="data_tdtext">10</span></td>
-									<td><span class="data_tdtext">TOBT Received</span></td>
-									<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
-									<td><span class="data_tdtext">09:23</span></td>
-									<td><span class="data_tdtext">UATMSP</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">9</span></td>
-									<td><span class="data_tdtext">ETOT Received</span></td>
-									<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
-									<td><span class="data_tdtext">09:23</span></td>
-									<td><span class="data_tdtext">V-CDM</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">8</span></td>
-									<td><span class="data_tdtext">EOBT Received</span></td>
-									<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
-									<td><span class="data_tdtext">09:27</span></td>
-									<td><span class="data_tdtext">V-CDM</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">7</span></td>
-									<td><span class="data_tdtext">ACGT Received</span></td>
-									<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
-									<td><span class="data_tdtext">09:23</span></td>
-									<td><span class="data_tdtext">VPO</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">6</span></td>
-									<td><span class="data_tdtext">AIBT Received</span></td>
-									<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
-									<td><span class="data_tdtext">09:08</span></td>
-									<td><span class="data_tdtext">VPO</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">5</span></td>
-									<td><span class="data_tdtext">AFOT Received</span></td>
-									<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
-									<td><span class="data_tdtext">09:05</span></td>
-									<td><span class="data_tdtext">UATMSP</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">4</span></td>
-									<td><span class="data_tdtext">ALDT Received</span></td>
-									<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
-									<td><span class="data_tdtext">09:02</span></td>
-									<td><span class="data_tdtext">UATMSP</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">3</span></td>
-									<td><span class="data_tdtext">AVIT Received</span></td>
-									<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
-									<td><span class="data_tdtext">08:58</span></td>
-									<td><span class="data_tdtext">UATMSP</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">2</span></td>
-									<td><span class="data_tdtext">EIBT Received</span></td>
-									<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
-									<td><span class="data_tdtext">08:38</span></td>
-									<td><span class="data_tdtext">VPO</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">1</span></td>
-									<td><span class="data_tdtext">TLDT Received</span></td>
-									<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
-									<td><span class="data_tdtext">09:00</span></td>
-									<td><span class="data_tdtext">UATMSP</span></td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<!-- // -->
-				</div>
-				<div class="popup_footer_row">
-					<div class="popup_footer_bottom_logo">
-						<img src="./assets/images/footer_logo2.png" alt="neighbor system">
+					<div class="popup_content_inner">
+						<!--  -->
+						<div class="data_table_zone_parent">
+							<div class="data_table_zone" id="history_table_zone">
+								<div class="data_table_render_wrap">
+									<div class="data_table_thead_row">
+										<table class="data_thead_table skin2">
+											<colgroup>
+												<col style="width:7%;" />
+												<col />
+												<col style="width:22%;" />
+												<col style="width:22%;" />
+												<col style="width:22%;" />
+											</colgroup>
+											<thead>
+												<tr>
+													<th><span class="data_thtext">No.</span></th>
+													<th><span class="data_thtext">Event</span></th>
+													<th><span class="data_thtext">TIME</span></th>
+													<th><span class="data_thtext">VALUE</span></th>
+													<th><span class="data_thtext">SOURCE</span></th>
+												</tr>
+											</thead>
+										</table>
+									</div>
+									<div class="data_table_tbody_row">
+										<div class="swiper-container swiper-tbody-scroll">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<table class="data_tbody_table">
+														<colgroup>
+															<col style="width:7%;" />
+															<col />
+															<col style="width:22%;" />
+															<col style="width:22%;" />
+															<col style="width:22%;" />
+														</colgroup>
+														<tbody>
+															<tr>
+																<td><span class="data_tdtext">11</span></td>
+																<td><span class="data_tdtext">TOBT Received</span></td>
+																<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
+																<td><span class="data_tdtext">09:23</span></td>
+																<td><span class="data_tdtext">UATMSP</span></td>
+															</tr>
+															<tr>
+																<td><span class="data_tdtext">10</span></td>
+																<td><span class="data_tdtext">TOBT Received</span></td>
+																<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
+																<td><span class="data_tdtext">09:23</span></td>
+																<td><span class="data_tdtext">UATMSP</span></td>
+															</tr>
+															<tr>
+																<td><span class="data_tdtext">9</span></td>
+																<td><span class="data_tdtext">ETOT Received</span></td>
+																<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
+																<td><span class="data_tdtext">09:23</span></td>
+																<td><span class="data_tdtext">V-CDM</span></td>
+															</tr>
+															<tr>
+																<td><span class="data_tdtext">8</span></td>
+																<td><span class="data_tdtext">EOBT Received</span></td>
+																<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
+																<td><span class="data_tdtext">09:27</span></td>
+																<td><span class="data_tdtext">V-CDM</span></td>
+															</tr>
+															<tr>
+																<td><span class="data_tdtext">7</span></td>
+																<td><span class="data_tdtext">ACGT Received</span></td>
+																<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
+																<td><span class="data_tdtext">09:23</span></td>
+																<td><span class="data_tdtext">VPO</span></td>
+															</tr>
+															<tr>
+																<td><span class="data_tdtext">6</span></td>
+																<td><span class="data_tdtext">AIBT Received</span></td>
+																<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
+																<td><span class="data_tdtext">09:08</span></td>
+																<td><span class="data_tdtext">VPO</span></td>
+															</tr>
+															<tr>
+																<td><span class="data_tdtext">5</span></td>
+																<td><span class="data_tdtext">AFOT Received</span></td>
+																<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
+																<td><span class="data_tdtext">09:05</span></td>
+																<td><span class="data_tdtext">UATMSP</span></td>
+															</tr>
+															<tr>
+																<td><span class="data_tdtext">4</span></td>
+																<td><span class="data_tdtext">ALDT Received</span></td>
+																<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
+																<td><span class="data_tdtext">09:02</span></td>
+																<td><span class="data_tdtext">UATMSP</span></td>
+															</tr>
+															<tr>
+																<td><span class="data_tdtext">3</span></td>
+																<td><span class="data_tdtext">AVIT Received</span></td>
+																<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
+																<td><span class="data_tdtext">08:58</span></td>
+																<td><span class="data_tdtext">UATMSP</span></td>
+															</tr>
+															<tr>
+																<td><span class="data_tdtext">2</span></td>
+																<td><span class="data_tdtext">EIBT Received</span></td>
+																<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
+																<td><span class="data_tdtext">08:38</span></td>
+																<td><span class="data_tdtext">VPO</span></td>
+															</tr>
+															<tr>
+																<td><span class="data_tdtext">1</span></td>
+																<td><span class="data_tdtext">TLDT Received</span></td>
+																<td><span class="data_tdtext">2023-03-01 00:00:00</span></td>
+																<td><span class="data_tdtext">09:00</span></td>
+																<td><span class="data_tdtext">UATMSP</span></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<div class="swiper-scrollbar"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- // -->
 					</div>
 				</div>
 				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
@@ -143,11 +171,9 @@
 			// 선언
 			var formPopup = new DesignPopup({
 				selector: "#formPopup",
-				beforeCallback() {
-					console.log('beforeCallback');
-				},
 				callback() {
 					console.log('callback');
+					tableScrollFunc("#history_table_zone", 10); // 스크롤높이
 				}
 			});
 			// show 호출

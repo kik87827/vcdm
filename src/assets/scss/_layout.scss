@@ -54,6 +54,8 @@ html:not(.touchmode) {
 
 .nav_one:hover:after{opacity:1;}
 
+.bottom_fixed_wrap{flex:0;padding:30px 0;}
+
 .footer_wrap{flex:0 0 40px;background:#1c212a;text-align: center;display:flex;justify-content: center;position:relative;padding:0 30px;align-items: center;border-top:1px solid #1c212a;box-sizing: border-box;}
 .footer_main_item{}
 .footer_copy{font-size:13px;color:#ffde00;line-height:1;position:relative;top:-1px;}
@@ -120,6 +122,7 @@ html:not(.touchmode) {
 .btn_popup_close{display:block;width:36px;height:36px;background:url("../images/ic_popup_close@2x.png") no-repeat 50% 50%/14px auto;position:absolute;top:15px;right:23px;}
 
 .popup_content_row{flex:1;min-height:0;position:relative;overflow-y:overlay;padding:30px 30px 40px;
+  &.scrollmode{padding-right:20px;}
   &.notitle{padding:65px 30px 30px;}
 }
 
