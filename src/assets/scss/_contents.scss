@@ -330,6 +330,9 @@ input.form_calendar{width:140px;border:1px solid #c8c8c8;border-radius:7px;paddi
     &.ptype2{
         th{padding:6px 0;}
     }
+    &.ptype3{
+        th{padding:10px 0;}
+    }
     &.skin2 th{border-color:#7ca8e3;background:#5b92dc;}
 }
 
@@ -388,12 +391,12 @@ input.form_calendar{width:140px;border:1px solid #c8c8c8;border-radius:7px;paddi
     }
 }
 .data_tbody_table td:last-of-type{}
-.data_tdtext_group{display:inline-flex;gap:20px;align-items: center;font-size:0;line-height:0;vertical-align: middle;}
+.data_tdtext_group{display:flex;/* gap:20px; */align-items: center;font-size:0;line-height:0;vertical-align: middle;}
 .data_tdtext_mark{display:inline-block;width:20px;height:40px;border-radius:4px;}
 .data_tdtext_mark_cols{flex:0 0 20px;font-size:0;line-height:0;}
-.data_tdtext_text_cols{}
+.data_tdtext_text_cols{text-align: center;flex:1;min-width:0;padding:0 10px;}
 .data_tdtext_text_cols .data_tdtext{}
-.data_tdtext{display:inline-block;font-size:15px;color:#4e4e4e;line-height:1.2;}
+.data_tdtext{display:inline-block;font-size:15px;color:#4e4e4e;line-height:1.4;}
 
 .swiper-wrapper.disabled {
     transform: translate3d(0px, 0, 0) !important;

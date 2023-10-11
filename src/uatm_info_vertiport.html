@@ -4,12 +4,78 @@
 <body class="front_body">
 	<div class="page_wrap">
 		@@include('./include/_header2.html')
-		<section class="middle_wrap">
-			내용이 들어갑니다.
+		<section class="middle_wrap type2">
+			<div class="data_table_zone">
+				<div class="data_table_sort_wrap">
+					<div class="data_sort_main_cols">
+						<ul class="box_dtab_list">
+							<li><a href="#" class="box_dtab">WEATHER</a></li>
+							<li><a href="#" class="box_dtab">NOTAM</a></li>
+							<li><a href="#" class="box_dtab active">VERTIPORT</a></li>
+						</ul>
+					</div>	
+					<div class="data_sort_sub_cols">
+						<div class="data_util_item_group">
+							<div class="data_util_item"><span class="data_util_item_text">Vertiport</span></div>
+							<div class="data_util_item"><select class="data_util_select"><option>ALL</option></select></div>
+						</div>
+					</div>
+				</div>
+				<div class="data_single_table_wrap">
+					<table class="data_single_table">
+						<colgroup>
+							<col style="width:12%;" />
+							<col style="width:12%;" />
+							<col style="width:25%;" />
+							<col style="width:14%;" />
+							<col />
+						</colgroup>
+						<thead>
+							<tr>
+								<th><span class="data_thtext">Vertiport</span></th>
+								<th><span class="data_thtext">Class</span></th>
+								<th><span class="data_thtext">Name</span></th>
+								<th><span class="data_thtext">Value</span></th>
+								<th><span class="data_thtext">Description</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="5"><strong class="data_tdtext">SE1GA</strong></td>
+								<td rowspan="5"><strong class="data_tdtext">FATO [*FA]</strong></td>
+								<td><span class="data_tdtext">FATO Code</span></td>
+								<td><strong class="data_tdtext">n</strong></td>
+								<td><span class="data_tdtext">FATO 코드</span></td>
+							</tr>
+							<tr>
+								<td><span class="data_tdtext">Length</span></td>
+								<td><strong class="data_tdtext">n</strong></td>
+								<td><span class="data_tdtext">FATO 길이</span></td>
+							</tr>
+							<tr>
+								<td><span class="data_tdtext">Width</span></td>
+								<td><strong class="data_tdtext">n</strong></td>
+								<td><span class="data_tdtext">FATO 너비</span></td>
+							</tr>
+							<tr>
+								<td><span class="data_tdtext">Geometry</span></td>
+								<td><strong class="data_tdtext">n</strong></td>
+								<td><span class="data_tdtext">FATO 지리적 위치</span></td>
+							</tr>
+							<tr>
+								<td><span class="data_tdtext">Slope</span></td>
+								<td><strong class="data_tdtext">n</strong></td>
+								<td><span class="data_tdtext">FATO 기울기</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</section>
 		@@include('./include/_footer.html')
 		<script>
 			menuRock("#nav_03");
+
 
 			// 퍼블확인용
 			let url = window.location.href.split('?')[1];

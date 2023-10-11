@@ -442,8 +442,12 @@ function tableScrollFunc(target,rowcount){
   const targetDomScroll = targetDom.querySelector(".swiper-tbody-scroll");
   const targetDomWrapper = targetDom.querySelector(".swiper-wrapper");
   const targetDomSlide = targetDom.querySelector(".swiper-slide");
+  const targetDomTr = targetDom.querySelectorAll(".data_table_tbody_row tr");
   let getcount = !!rowcount ? rowcount : 0;
-  let targetDomScrollTr = targetDomScroll.querySelectorAll("tr")[getcount];
+  let targetDomScrollTr = null;
+  if(!!targetDomTr){
+    targetDomScrollTr = targetDomTr[getcount];
+  }
   
   if(!!rowcount && !!targetDomScrollTr){
     targetDomScroll.style.height = (targetDomScrollTr.offsetTop) + "px";
@@ -468,6 +472,7 @@ function tableScrollFunc(target,rowcount){
   disabledFunc();
 
   function disabledFunc(){
+    if(!targetDomTr || !targetDomScroll || !targetDomWrapper){return;}
     if(targetDomScroll.getBoundingClientRect().height > targetDomWrapper.getBoundingClientRect().height){
       targetDomWrapper.classList.add("disabled");
     }else{

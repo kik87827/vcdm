@@ -4141,6 +4141,9 @@ input.form_calendar {
 .data_thead_table.ptype2 th {
   padding: 6px 0;
 }
+.data_thead_table.ptype3 th {
+  padding: 10px 0;
+}
 .data_thead_table.skin2 th {
   border-color: #7ca8e3;
   background: #5b92dc;
@@ -4255,8 +4258,7 @@ input.form_calendar {
 }
 
 .data_tdtext_group {
-  display: inline-flex;
-  gap: 20px;
+  display: flex; /* gap:20px; */
   align-items: center;
   font-size: 0;
   line-height: 0;
@@ -4276,11 +4278,18 @@ input.form_calendar {
   line-height: 0;
 }
 
+.data_tdtext_text_cols {
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+  padding: 0 10px;
+}
+
 .data_tdtext {
   display: inline-block;
   font-size: 15px;
   color: #4e4e4e;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 .swiper-wrapper.disabled {
