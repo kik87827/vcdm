@@ -125,8 +125,8 @@ DesignPopup.prototype.dimCheck = function () {
 DesignPopup.prototype.scrollCheck = function () {
   const popupContentRow = this.selector.querySelector(".popup_content_row");
   const popupContentInner = this.selector.querySelector(".popup_content_inner");
-  console.dir(popupContentRow);
-  if(!!popupContentRow){
+  
+  if(!!popupContentRow && !!popupContentInner){
     if(popupContentInner.getBoundingClientRect().height > popupContentRow.getBoundingClientRect().height){
       popupContentRow.classList.add("scrollmode");
     }else{
@@ -531,4 +531,32 @@ function responTableFunc(){
       });
     }
   }
+}
+
+
+function tableTrActive(){
+  addDynamicEventListener(document.body, 'click', '.select_table tr', function(e) {
+    const thisTr = e.target.closest("tr");
+    const thisSiblings = siblings(thisTr);
+    thisSiblings.forEach((item)=>{
+      if(item !== thisTr){
+        item.classList.remove("active");
+      }
+    });
+    thisTr.classList.toggle("active");
+  });
+}
+
+
+function siblings(t) {
+  var children = t.parentElement.children;
+  var tempArr = [];
+
+  for (var i = 0; i < children.length; i++) {
+    tempArr.push(children[i]);
+  }
+
+  return tempArr.filter(function(e) {
+    return e != t;
+  });
 }
