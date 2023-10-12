@@ -43,16 +43,130 @@
 				</ul>
 			</nav>
 		</header>
-		<section class="middle_wrap">
-			내용이 들어갑니다.
+		<section class="middle_wrap type2">
+			<div class="data_table_zone">
+				<div class="data_table_sort_wrap">
+					<div class="data_sort_main_cols">
+						<ul class="box_dtab_list">
+							<li><a href="#" class="box_dtab">VPO</a></li>
+							<li><a href="#" class="box_dtab active">UATMSP</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="data_content_wrap">
+					<div class="data_single_table_wrap">
+						<table class="data_single_table select_table">
+							<colgroup>
+								<col style="width:35%;" />
+								<col />
+							</colgroup>
+							<thead>
+								<tr>
+									<th><span class="data_thtext">Name</span></th>
+									<th><span class="data_thtext">IP</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span class="data_tdtext">vpo1</span></td>
+									<td><span class="data_tdtext">192.168.0.10</span></td>
+								</tr>
+								<tr>
+									<td><span class="data_tdtext">vpo1</span></td>
+									<td><span class="data_tdtext">192.168.0.10</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btn_bottom_wrap type2">
+						<a href="#" class="btn_box medium" id="btn_del">DELETE</a>
+						<a href="#" class="btn_box primary medium" id="btn_add">ADD</a>
+					</div>
+				</div>
+			</div>
 		</section>
 		<footer class="footer_wrap type2">
 			<div class="footer_layer_item"><span class="footer_bottom_logo"><img src="./assets/images/footer_logo2.png" alt="neighbor system"></span></div>
 		</footer>
 
+		<!-- popup -->
+		<div class="popup_wrap" id="addPopup">
+			<div class="bg_dim"></div>
+			<div class="popup_item size_xsmall">
+				<div class="popup_content_row notitle">
+					<div class="fieldview_tb_wrap">
+						<table class="fieldview_tb">
+							<tr>
+								<th><span class="fieldview_thtext">Name</span></th>
+								<td><input type="text" class="input_field" value="vpo4"></td>
+							</tr>
+							<tr>
+								<th><span class="fieldview_thtext">Vertiport</span></th>
+								<td><input type="text" class="input_field" value="SE1GP"></td>
+							</tr>
+							<tr>
+								<th><span class="fieldview_thtext">IP</span></th>
+								<td><input type="text" class="input_field" value="192.168.0.2"></td>
+							</tr>
+						</table>
+					</div>
+					<div class="btn_bottom_wrap">
+						<a href="#" class="btn_box primary medium close_trigger">Confirm</a>
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+			</div>
+		</div>
+		<div class="popup_wrap" id="confirmPopup">
+			<div class="bg_dim"></div>
+			<div class="popup_item size_xsmall">
+				<div class="popup_content_row notitle">
+					<div class="popup_message_wrap">
+						<p class="popup_message">삭제하시겠습니까?</p>
+					</div>
+					<div class="btn_bottom_wrap">
+						<a href="#" class="btn_box medium close_trigger">Cancel</a>
+						<a href="#" class="btn_box primary medium close_trigger">Confirm</a>
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+			</div>
+		</div>
+		<!-- // popup -->
+
 
 		<script>
 			menuRock("#nav_01");
+
+			tableTrActive();
+
+			// 선언
+			var addPopup = new DesignPopup({
+				selector: "#addPopup",
+				beforeCallback() {
+					console.log('beforeCallback');
+				},
+				callback() {
+					console.log('callback');
+				}
+			});
+			var confirmPopup = new DesignPopup({
+				selector: "#confirmPopup",
+				beforeCallback() {
+					console.log('beforeCallback');
+				},
+				callback() {
+					console.log('callback');
+				}
+			});
+
+			// 이벤트
+			document.querySelector("#btn_add").addEventListener("click", () => {
+				addPopup.popupShow();
+			});
+			document.querySelector("#btn_del").addEventListener("click", () => {
+				confirmPopup.popupShow();
+			});
 
 			// 퍼블확인용
 			let url = window.location.href.split('?')[1];

@@ -1247,6 +1247,9 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 .popup_content_row.notitle {
   padding: 65px 30px 30px;
 }
+.popup_content_row .btn_bottom_wrap {
+  margin-top: 30px;
+}
 
 .popup_footer_row {
   flex: 0 0 40px;
@@ -4433,6 +4436,58 @@ input.form_calendar {
   color: #333333;
 }
 
+.fieldview_tb_wrap {
+  border-top: 1px solid #59687f;
+}
+
+.fieldview_tb {
+  width: 100%;
+  box-sizing: border-box;
+}
+.fieldview_tb th,
+.fieldview_tb td {
+  text-align: center;
+  padding: 10px;
+}
+.fieldview_tb th {
+  background: #eaf1fa;
+  border-bottom: 1px solid #c8d5ea;
+  width: 30%;
+  padding: 10px 20px;
+}
+.fieldview_tb td {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 10px 20px;
+}
+.fieldview_tb td.empty {
+  border-right: 0 !important;
+  border-left: 0 !important;
+  border-bottom: 0 !important;
+}
+.fieldview_tb td.type2 {
+  padding: 0;
+}
+
+.fieldview_thtext {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1b1b1b;
+  white-space: nowrap;
+}
+
+input.input_field {
+  width: 100%;
+  line-height: 1;
+  height: 42px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dadada;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
 .viewer_display_long_cols {
   flex: 1;
   min-width: 0;
@@ -4590,6 +4645,9 @@ input.paging_input {
   justify-content: center;
   gap: 8px;
 }
+.btn_bottom_wrap.type2 {
+  margin-top: 30px;
+}
 
 .btn_box {
   display: flex;
@@ -4607,6 +4665,9 @@ input.paging_input {
 .btn_box.primary {
   background: #333c4c;
   color: #fff;
+}
+.btn_box.medium {
+  padding: 8px 11px 9px;
 }
 
 .data_current_box {
@@ -5023,6 +5084,24 @@ input.paging_input {
   padding: 0 75px;
 }
 
+.popup_message_wrap {
+  border-top: 1px solid #59687f;
+  border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 135px;
+}
+
+.popup_message {
+  font-size: 16px;
+  color: #1b1b1b;
+  text-align: center;
+  font-weight: 500;
+}
+
 .data_util_item_group {
   display: flex;
   font-size: 0;
@@ -5094,6 +5173,56 @@ select.data_util_select:disabled {
   background-color: #f7f7f7;
   color: #999999;
   opacity: 1;
+}
+
+select.field_select {
+  border: 1px solid #dadada;
+  font-size: 16px;
+  height: 42px;
+  color: #4e4e4e;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR";
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  background: #fff url("../images/ico_select_44.png") no-repeat 100% 50%/33px auto;
+  line-height: 1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+select.field_select option {
+  padding: 0;
+}
+
+select.field_select::-ms-value {
+  background: none;
+  color: #2d2d2d;
+}
+
+select.field_select::-ms-expand {
+  display: none;
+}
+
+select.field_select::-ms-value {
+  background: none;
+  color: #2d2d2d;
+}
+
+select.field_select.ready {
+  color: #999;
+}
+
+select.field_select:disabled {
+  background-color: #f7f7f7;
+  color: #999999;
+  opacity: 1;
+}
+
+.data_content_wrap {
+  flex: 1;
+  min-height: 0;
 }
 
 .data_table_multi_wrap {

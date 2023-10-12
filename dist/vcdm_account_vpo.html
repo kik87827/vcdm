@@ -87,8 +87,8 @@
 					</div>
 					<div class="data_table_control_wrap">
 						<ul class="data_control_box_list">
-							<li><a href="#" class="btn_control_box">ADD</a></li>
-							<li><a href="#" class="btn_control_box type2">DELETE</a></li>
+							<li><a href="javascript:;" class="btn_control_box" id="btn_add">ADD</a></li>
+							<li><a href="javascript:;" class="btn_control_box type2" id="btn_del">DELETE</a></li>
 						</ul>
 					</div>
 				</div>
@@ -104,7 +104,25 @@
 			<div class="bg_dim"></div>
 			<div class="popup_item size_xsmall">
 				<div class="popup_content_row notitle">
-					내용이 들어갑니다.
+					<div class="fieldview_tb_wrap">
+						<table class="fieldview_tb">
+							<tr>
+								<th><span class="fieldview_thtext">Name</span></th>
+								<td><input type="text" class="input_field" value="vpo4"></td>
+							</tr>
+							<tr>
+								<th><span class="fieldview_thtext">Vertiport</span></th>
+								<td><input type="text" class="input_field" value="SE1GP"></td>
+							</tr>
+							<tr>
+								<th><span class="fieldview_thtext">IP</span></th>
+								<td><input type="text" class="input_field" value="192.168.0.2"></td>
+							</tr>
+						</table>
+					</div>
+					<div class="btn_bottom_wrap">
+						<a href="#" class="btn_box primary medium close_trigger">Confirm</a>
+					</div>
 				</div>
 				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
 			</div>
@@ -113,7 +131,13 @@
 			<div class="bg_dim"></div>
 			<div class="popup_item size_xsmall">
 				<div class="popup_content_row notitle">
-					내용이 들어갑니다.2
+					<div class="popup_message_wrap">
+						<p class="popup_message">삭제하시겠습니까?</p>
+					</div>
+					<div class="btn_bottom_wrap">
+						<a href="#" class="btn_box medium close_trigger">Cancel</a>
+						<a href="#" class="btn_box primary medium close_trigger">Confirm</a>
+					</div>
 				</div>
 				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
 			</div>
@@ -145,6 +169,14 @@
 				callback() {
 					console.log('callback');
 				}
+			});
+
+			// 이벤트
+			document.querySelector("#btn_add").addEventListener("click", () => {
+				addPopup.popupShow();
+			});
+			document.querySelector("#btn_del").addEventListener("click", () => {
+				confirmPopup.popupShow();
 			});
 
 
