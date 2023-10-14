@@ -5,7 +5,89 @@
 	<div class="page_wrap">
 		@@include('./include/_header3.html')
 		<section class="middle_wrap">
-			내용이 들어갑니다.
+			<div class="data_table_single_zone">
+				<div class="data_table_sort_wrap">
+					<div class="data_sort_main_cols">
+						<p class="block_title">DATA</p>
+					</div>	
+					<div class="data_sort_sub_cols">
+						<div class="data_util_item_group">
+							<div class="data_util_item"><span class="data_util_item_text">Vertiport</span></div>
+							<div class="data_util_item"><select class="data_util_select"><option>ALL</option></select></div>
+						</div>
+						<input type="text" class="form_calendar" value="2023-02-20">
+					</div>
+				</div>
+				<div class="data_table_multi_wrap">
+					<div class="data_single_table_wrap">
+						<table class="data_single_table select_table">
+							<colgroup>
+								<col style="width:15%;" />
+								<col style="width:30%;" />
+								<col style="width:20%;" />
+								<col />
+							</colgroup>
+							<thead>
+								<tr>
+									<th><span class="data_thtext">Class</span></th>
+									<th><span class="data_thtext">Name</span></th>
+									<th><span class="data_thtext">Value</span></th>
+									<th><span class="data_thtext">Description</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="5"><span class="data_tdtext">FATO [*FA]</span></td>
+									<td><span class="data_tdtext">FATO Code</span></td>
+									<td><span class="data_tdtext">n</span></td>
+									<td><span class="data_tdtext">FATO 코드</span></td>
+								</tr>	
+								<tr>
+									<td><span class="data_tdtext">Length</span></td>
+									<td><span class="data_tdtext">n</span></td>
+									<td><span class="data_tdtext">FATO 길이</span></td>
+								</tr>	
+								<tr>
+									<td><span class="data_tdtext">Width</span></td>
+									<td><span class="data_tdtext">n</span></td>
+									<td><span class="data_tdtext">FATO 너비</span></td>
+								</tr>	
+								<tr>
+									<td><span class="data_tdtext">Geometry</span></td>
+									<td><span class="data_tdtext">n</span></td>
+									<td><span class="data_tdtext">FATO 지리적 위치</span></td>
+								</tr>	
+								<tr>
+									<td><span class="data_tdtext">Slope</span></td>
+									<td><span class="data_tdtext">n</span></td>
+									<td><span class="data_tdtext">FATO 기울기</span></td>
+								</tr>	
+							</tbody>
+						</table>
+					</div>
+					<div class="data_table_control_wrap">
+						<ul class="data_control_box_list">
+							<li><a href="javascript:;" class="btn_control_box" id="btn_add">ADD</a></li>
+							<li><a href="javascript:;" class="btn_control_box type2" id="btn_del">DELETE</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="bottom_fixed_wrap type2">
+			<!-- paging -->
+			<div class="paging_wrap">
+				<a href="#" class="btn_paging_control prev_first"><span class="hdtext">처음</span></a>
+				<a href="#" class="btn_paging_control prev_go"><span class="hdtext">이전</span></a>
+				<div class="paging_form_group">
+					<input type="text" class="paging_input" value="1">
+					<span class="paging_form_part">/</span>
+					<span class="paging_form_length">14</span>
+				</div>
+				<a href="#" class="btn_paging_control next_go"><span class="hdtext">다음</span></a>
+				<a href="#" class="btn_paging_control next_last"><span class="hdtext">끝</span></a>
+			</div>
+			<!-- // paging -->
 		</section>
 		@@include('./include/_footer.html')
 
@@ -17,21 +99,36 @@
 					<div class="fieldview_tb_wrap">
 						<table class="fieldview_tb">
 							<tr>
-								<th><span class="fieldview_thtext">Class</span></th>
-								<td><input type="text" class="input_field" value="FATO"></td>
-							</tr>
-							<tr>
 								<th><span class="fieldview_thtext">Name</span></th>
-								<td><input type="text" class="input_field" value="width"></td>
+								<td><input type="text" class="input_field" value="vpo4"></td>
 							</tr>
 							<tr>
-								<th><span class="fieldview_thtext">Value</span></th>
-								<td><input type="text" class="input_field" value="15"></td>
+								<th><span class="fieldview_thtext">Vertiport</span></th>
+								<td><input type="text" class="input_field" value="SE1GP"></td>
+							</tr>
+							<tr>
+								<th><span class="fieldview_thtext">IP</span></th>
+								<td><input type="text" class="input_field" value="192.168.0.2"></td>
 							</tr>
 						</table>
 					</div>
 					<div class="btn_bottom_wrap">
-						<a href="#" class="btn_box primary medium">Confirm</a>
+						<a href="#" class="btn_box primary medium close_trigger">Confirm</a>
+					</div>
+				</div>
+				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
+			</div>
+		</div>
+		<div class="popup_wrap" id="confirmPopup">
+			<div class="bg_dim"></div>
+			<div class="popup_item size_xsmall">
+				<div class="popup_content_row notitle">
+					<div class="popup_message_wrap">
+						<p class="popup_message">삭제하시겠습니까?</p>
+					</div>
+					<div class="btn_bottom_wrap">
+						<a href="#" class="btn_box medium close_trigger">Cancel</a>
+						<a href="#" class="btn_box primary medium close_trigger">Confirm</a>
 					</div>
 				</div>
 				<a href="javascript:;" class="btn_popup_close"><span class="hdtext">팝업 닫기</span></a>
@@ -43,6 +140,8 @@
 		<script>
 			menuRock("#nav_02");
 
+			tableTrActive();
+
 			// 선언
 			var addPopup = new DesignPopup({
 				selector: "#addPopup",
@@ -53,6 +152,23 @@
 					console.log('callback');
 				}
 			});
+			var confirmPopup = new DesignPopup({
+				selector: "#confirmPopup",
+				beforeCallback(){
+					console.log('beforeCallback');
+				},
+				callback(){
+					console.log('callback');
+				}
+			});
+
+			// 이벤트
+			document.querySelector("#btn_add").addEventListener("click",()=>{
+				addPopup.popupShow();
+			});
+			document.querySelector("#btn_del").addEventListener("click",()=>{
+				confirmPopup.popupShow();
+			});
 
 			// 퍼블확인용
 			let url = window.location.href.split('?')[1];
@@ -61,6 +177,9 @@
 			if(url_2 === "add_popup"){
 				// show 호출
 				addPopup.popupShow();
+			}else if(url_2 === "confirm_popup"){
+				// show 호출
+				confirmPopup.popupShow();
 			}
 		</script>
 	</div>
