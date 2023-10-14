@@ -4,8 +4,8 @@
 <body class="front_body">
 	<div class="page_wrap">
 		@@include('./include/_header.html')
-		<section class="middle_wrap type2">
-			<div class="data_table_zone" id="data_table_zone_target">
+		<section class="middle_wrap">
+			<div class="data_table_single_zone">
 				<div class="data_table_sort_wrap">
 					<div class="data_sort_main_cols">
 						<ul class="box_dtab_list">
@@ -19,69 +19,13 @@
 					</div>
 				</div>
 				<div class="data_table_render_wrap">
-					<div class="data_table_thead_row">
-						<table class="data_thead_table">
-							<colgroup>
-								<col style="width:7%;" />
-								<col />
-							</colgroup>
-							<thead>
-								<tr>
-									<th><span class="data_thtext">No.</span></th>
-									<th><span class="data_thtext">DESCRIPTION</span></th>
-								</tr>
-							</thead>
-						</table>
-					</div>
-					<div class="data_table_tbody_row">
-						<div class="swiper-container swiper-tbody-scroll">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<table class="data_tbody_table">
-										<colgroup>
-											<col style="width:7%;" />
-											<col />
-										</colgroup>
-										<tbody>
-											<tr>
-												<td><span class="data_tdtext">6</span></td>
-												<td class="align_left"><span class="data_tdtext">METAR SE1GA 070800Z 27004KT 9999 FEW030 31/19 Q1013 RMK SLP135 8/500 9/100=</span></td>
-											</tr>
-											<tr>
-												<td><span class="data_tdtext">5</span></td>
-												<td class="align_left"><span class="data_tdtext">METAR SE1GA 070700Z 08006KT 040V140 CAVOK 30/17 Q1013 NOSIG=</span></td>
-											</tr>
-											<tr>
-												<td><span class="data_tdtext">4</span></td>
-												<td class="align_left"><span class="data_tdtext">METAR SE1GA 070600Z 01015G25KT 9999 SCT020 BKN080 27/20 Q1015 RMK CIG080 SLP155 8/510 9/320=</span></td>
-											</tr>
-											<tr>
-												<td><span class="data_tdtext">3</span></td>
-												<td class="align_left"><span class="data_tdtext">TAF SE1GA 070500Z 0706/0812 08006KT CAVOK TN19/0721Z TX31/0806Z BECMG 0802/0804 30006KT=</span></td>
-											</tr>
-											<tr>
-												<td><span class="data_tdtext">2</span></td>
-												<td class="align_left"><span class="data_tdtext">METAR SE1GA 070400Z 09007KT 050V130 CAVOK 26/19 Q1014 NOSIG=</span></td>
-											</tr>
-											<tr>
-												<td><span class="data_tdtext">1</span></td>
-												<td class="align_left"><span class="data_tdtext">METAR SE1GA 070300Z 08008KT 050V120 CAVOK 27/19 Q1014 NOSIG=</span></td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-							<div class="swiper-scrollbar"></div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</section>
 		@@include('./include/_footer.html')
 		<script>
 			menuRock("#nav_05");
-
-			tableScrollFunc("#data_table_zone_target");
 
 			// 퍼블확인용
 			let url = window.location.href.split('?')[1];

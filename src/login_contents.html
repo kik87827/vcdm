@@ -1,0 +1,29 @@
+	<h1 class="cener_form_util_logo"><img src="./assets/images/login_logo.png" alt="neighbor system"></h1>
+	<div class="cform_content_box">
+		<h1 class="cform_content_logo"><img src="./assets/images/login_toplogo.png" alt="UAM VCDM"></h1>
+		<div class="cform_field_tb_wrap">
+			<p class="cform_field_tb_title">SIGN IN</p>
+			<div class="cform_field_tb">
+				<div class="cform_field_tr">
+					<input type="text" class="form_input" placeholder="ID">
+					<i class="ico_cform ico_id"></i>
+				</div>
+				<div class="cform_field_tr">
+					<input type="password" class="form_input" placeholder="Password">
+					<i class="ico_cform ico_pw"></i>
+				</div>
+			</div>
+			<div class="btn_cform_submit_row"><a href="#" class="btn_cform_submit"><span class="btn_cform_submit_text">LOGIN</span></a></div>
+			<div class="cform_warn_message_box" style="display:none">
+				<p class="cform_warn_message">ID or password does not match</p>
+			</div>
+		</div>
+	</div>
+	<script>
+		// 퍼블확인용
+		let url = window.location.href.split('?')[1];
+		let url_2 = url !== undefined ? url.split('#')[0] : null;
+		if(url_2 === "message"){
+			document.querySelector(".cform_warn_message_box").style.display = "block";
+		}
+	</script>
