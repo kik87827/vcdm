@@ -4412,6 +4412,45 @@ input.form_calendar {
   transform: translate3d(0px, 0, 0) !important;
 }
 
+.data_table_guide_box_wrap {
+  display: flex;
+  gap: 23px;
+  margin-top: 7px;
+}
+
+.data_table_guide_box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.data_table_guide_box.type2 .tb_guide_title_row {
+  background: #59b3d4;
+}
+.tb_guide_title_row {
+  flex: 0;
+  padding: 10px;
+  background: #5b92dc;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.tb_guide_title {
+  font-size: 17px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.tb_guide_content_row {
+  font-size: 14px;
+  color: #2b2b2b;
+  line-height: 1.5;
+  flex: 1;
+  border: 1px solid #d7d7d7;
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+  padding: 20px;
+}
+
 .swiper-tbody-scroll .swiper-scrollbar {
   width: 8px;
   background: #f5f5f5;
