@@ -61,7 +61,10 @@ html:not(.touchmode) {
 
 .footer_wrap{flex:0 0 40px;background:#1c212a;text-align: center;display:flex;justify-content: center;position:relative;padding:0 30px;align-items: center;border-top:1px solid #1c212a;box-sizing: border-box;}
 .footer_main_item{}
-.footer_copy{font-size:13px;color:#ffde00;line-height:1;position:relative;top:-1px;}
+.footer_copy{font-size:13px;color:#ffde00;line-height:1;position:relative;}
+.window{
+  .footer_copy{top:-3px;}
+}
 .footer_layer_item{position:absolute;top:0;right:0;height:100%;display: flex;align-items: center;padding:0 30px 0 0;}
 .footer_bottom_logo{max-width:160px;}
 .footer_bottom_logo img{vertical-align: top;}
