@@ -199,7 +199,9 @@
 		<script>
 			menuRock("#nav_02");
 
-			tableScrollFunc("#uatm_alarm_table");
+			window.addEventListener("load",()=>{
+				tableScrollFunc("#uatm_alarm_table");
+			})
 
 			// 퍼블확인용
 			let url = window.location.href.split('?')[1];

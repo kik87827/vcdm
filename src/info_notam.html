@@ -20,7 +20,7 @@
 				</div>
 				<div class="data_table_render_wrap">
 					<div class="data_table_thead_row">
-						<table class="data_thead_table skin2">
+						<table class="data_thead_table">
 							<colgroup>
 								<col style="width:5%;" />
 								<col style="width:9%;" />
@@ -97,15 +97,10 @@
 		@@include('./include/_footer.html')
 		<script>
 			menuRock("#nav_05");
-
-			tableScrollFunc("#data_table_zone_target");
-
-			// 퍼블확인용
-			let url = window.location.href.split('?')[1];
-			let url_2 = url !== undefined ? url.split('#')[0] : null;
-			if(url_2 === "loading"){
-				document.querySelector(".loading_layer").classList.add("active");
-			}
+			
+			window.addEventListener("load",()=>{
+				tableScrollFunc("#data_table_zone_target");
+			})
 		</script>
 	</div>
 </body>

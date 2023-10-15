@@ -4,7 +4,7 @@
 /* login */
 .page_wrap{
     &.center_form_wrap{
-        max-width:1920px;margin:0 auto;background:url("../images/bg_login.jpg") no-repeat 50% 0/cover;
+        /* max-width:1920px;margin:0 auto; */background:url("../images/bg_login.jpg") no-repeat 50% 0/cover;
     }
 }
 
@@ -230,7 +230,7 @@ input.form_calendar{width:140px;border:1px solid #c8c8c8;border-radius:7px;paddi
 .swiper-container.timeline-chart-container .swiper-slide{width:auto;height:auto;}
 .swiper-container.timeline-chart-container .swiper-wrapper{width:auto;height:auto;}
 .swiper-container.timeline-chart-container .swiper-slide{width:auto;height:auto;background:url("../images/bg_horline_last.png") repeat-y 100% 50%,url("../images/bg_horline.png");}
-.timeline-chart-scrollbar.swiper-scrollbar{width:100%;left:0;bottom:-22px;height:8px;position:absolute;background:#f5f5f5;}
+.timeline-chart-scrollbar.swiper-scrollbar{width:100%;left:0;bottom:-22px;height:8px;position:absolute;background:#f5f5f5;display:none;}
 .timeline-chart-scrollbar .swiper-scrollbar-drag{background:#d9d9d9;}
 
 .data_timeline_box_cols{flex:0 0 270px;display:flex;flex-direction: column;position:relative;z-index:5;}
@@ -388,7 +388,7 @@ input.form_calendar{width:140px;border:1px solid #c8c8c8;border-radius:7px;paddi
         }
     }
     
-    th{background:#59687f;padding:14px 0;border-right:1px solid #707c8f;
+    th{background:#59687f;padding:14px 0;border-right:1px solid #707c8f;border-bottom:0;
         
         &:last-of-type{border-right:0;}
         &[rowspan]{border-left:1px solid #707c8f;}
@@ -396,7 +396,7 @@ input.form_calendar{width:140px;border:1px solid #c8c8c8;border-radius:7px;paddi
     }
     tr{
         &:first-of-type{
-            td{border-top-color: transparent;}
+            td{border-top-color: transparent;border-top:0;}
         }
     }
     td{border-bottom:1px solid #e7e7e7;border-top:1px solid #e7e7e7;padding:14px 10px;
@@ -404,6 +404,9 @@ input.form_calendar{width:140px;border:1px solid #c8c8c8;border-radius:7px;paddi
         &:first-of-type{border-left:0;/* border-right:1px solid #e7e7e7; */}
         &:last-of-type{border-right:0;}
         &.align_left{padding:14px 20px;text-align: left;}
+    }
+    tbody{
+        td{position:relative;background:#fff;}
     }
     &.skin2{
         th{border-color:#7ca8e3;background:#5b92dc;}
@@ -426,7 +429,7 @@ input.form_calendar{width:140px;border:1px solid #c8c8c8;border-radius:7px;paddi
                 &.active{
                     td{
                         &:after{display:block;content:'';height:1px;background:#59687f;position:absolute;top:-1px;left:-1px;background:#59687f;width:calc(100% + 2px);}
-                        position:relative;z-index:2;background:#f4fbff;border:1px solid #59687f;border-left:0;border-right:0;
+                        position:relative;z-index:2;background:#f4fbff;border:1px solid #59687f;border-left:0;border-right:0;border-top:0;
                         &:first-of-type,&[rowspan] + td{
                             // border-left:1px solid #59687f !important;
                             &:before{display:block;content:'';width:1px;height:calc(100% + 1px);position:absolute;top:0;left:-1px;background:#59687f;}
@@ -509,10 +512,10 @@ input.form_calendar{width:140px;border:1px solid #c8c8c8;border-radius:7px;paddi
 
 .viewer_display_wrap{display:flex;gap:30px;}
 .viewer_display_short_cols{flex:0 0 290px;display:flex;flex-direction: column;}
-.viewer_display_title{flex:0;display:flex;align-items:center;justify-content:center;background:#5b779d;text-align:center;margin-bottom:2px;font-size:16px;color:#fff;font-weight:500;border-radius:4px;padding:15px;}
+.viewer_display_title{flex:0;display:flex;align-items:center;justify-content:center;background:#5b779d;text-align:center;margin-bottom:2px;font-size:16px;color:#fff;border-radius:4px;padding:10px;font-weight:500;}
 .viewer_display_title.type2{background:#5b92dc;align-items: initial;padding:0;}
-.viewer_display_title.type2 .viewer_display_cols{flex:1;padding:15px;display:flex;align-items: center;}
-.viewer_display_cols{flex:1;min-width:0;border-right:1px solid rgba(255,255,255,.3); display:flex; align-items:center; justify-content:center;
+.viewer_display_title.type2 .viewer_display_cols{flex:1;padding:10px;display:flex;align-items: center;}
+.viewer_display_cols{flex:1;min-width:0;border-right:1px solid rgba(255,255,255,.3); display:flex; align-items:center; justify-content:center;font-weight:500;
     &:last-of-type{border-right:0;}
 }
 
@@ -528,8 +531,10 @@ input.form_calendar{width:140px;border:1px solid #c8c8c8;border-radius:7px;paddi
     }
 }
 
+.viewer_thtext{font-weight:500;color:#333333;}
 .viewer_thtext,
-.viewer_tdtext{display:inline-block;font-size:16px;font-weight:500;color:#333333;}
+.viewer_tdtext{display:inline-block;font-size:16px;}
+.viewer_tdtext{color:#4e4e4e;}
 
 .fieldview_tb_wrap{
     border-top:1px solid #59687f;
@@ -600,12 +605,11 @@ input.paging_input{border:1px solid #c8c8c8;width:40px;height:30px;text-align: c
 .paging_form_part{padding:0 5px;}
 .paging_form_length{}
 
-.btn_bottom_wrap{margin-top:25px;text-align: center;display:flex;justify-content: center;gap:8px;
-    &.type2{margin-top:30px;}
+.btn_bottom_wrap{margin-top:30px;text-align: center;display:flex;justify-content: center;gap:8px;
 }
 .btn_box{
     display:flex;min-width:160px;box-sizing:border-box;padding:11px 11px 12px;font-size:17px;color:#333c4c;font-weight:500;border-radius:100px;border:1px solid #455267;text-align:center;justify-content:center;
-    &.primary{background:#333c4c;color:#fff;}
+    &.primary{background:#3f4858;color:#fff;}
     &.medium{padding:8px 11px 9px;}
 }
 
@@ -738,7 +742,10 @@ input.paging_input{border:1px solid #c8c8c8;width:40px;height:30px;text-align: c
     &.wid2{flex:0 0 240px;}
     &.wid_long{flex:1;}
 }
-.line_status_item_text{flex:1;display:flex;background:url("../images/line_chart_body_bg_white.png") repeat-x 0 0;align-items: center;justify-content: center;}
+.line_status_item_text{flex:1;display:flex;background:url("../images/line_chart_body_bg_white.png") repeat-x 0 0;align-items: center;justify-content: center;font-size:17px;}
+.window{
+    .line_status_item_text{padding-bottom:3px;}
+}
 .linechart_tb_zone{position:relative;background:#fff;margin-top:25px;text-align: center;}
 .linechart_tb{display:flex;justify-content: center;
     margin-bottom:-1px;

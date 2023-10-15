@@ -313,7 +313,9 @@
 		<script>
 			menuRock("#nav_01");
 
-			tableScrollFunc("#uatm_milestone_table");
+			window.addEventListener("load",()=>{
+				tableScrollFunc("#uatm_milestone_table");
+			})
 
 			// 퍼블확인용
 			let url = window.location.href.split('?')[1];

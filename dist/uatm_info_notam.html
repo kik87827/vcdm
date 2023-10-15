@@ -54,6 +54,12 @@
 						</ul>
 					</div>
 					<div class="data_sort_sub_cols">
+						<div class="data_util_item_group">
+							<div class="data_util_item"><span class="data_util_item_text">Vertiport</span></div>
+							<div class="data_util_item"><select class="data_util_select">
+									<option>ALL</option>
+								</select></div>
+						</div>
 						<input type="text" class="form_calendar" value="2023-02-20">
 					</div>
 				</div>
@@ -63,15 +69,17 @@
 							<colgroup>
 								<col style="width:5%;" />
 								<col style="width:10%;" />
+								<col style="width:10%;" />
 								<col style="width:7%;" />
-								<col style="width:7%;" />
-								<col style="width:7%;" />
-								<col style="width:7%;" />
+								<col style="width:8%;" />
+								<col style="width:8%;" />
+								<col style="width:8%;" />
 								<col />
 							</colgroup>
 							<thead>
 								<tr>
 									<th><span class="data_thtext">No.</span></th>
+									<th><span class="data_thtext">VERTIPORT</span></th>
 									<th><span class="data_thtext">ISSUE<br>TIME</span></th>
 									<th><span class="data_thtext">QCODE</span></th>
 									<th><span class="data_thtext">NOTAM<br>NO</span></th>
@@ -90,15 +98,17 @@
 										<colgroup>
 											<col style="width:5%;" />
 											<col style="width:10%;" />
+											<col style="width:10%;" />
 											<col style="width:7%;" />
-											<col style="width:7%;" />
-											<col style="width:7%;" />
-											<col style="width:7%;" />
+											<col style="width:8%;" />
+											<col style="width:8%;" />
+											<col style="width:8%;" />
 											<col />
 										</colgroup>
 										<tbody>
 											<tr>
 												<td><span class="data_tdtext">2</span></td>
+												<td><span class="data_tdtext">SE1GA</span></td>
 												<td><span class="data_tdtext">23-09-07 01:56</span></td>
 												<td><span class="data_tdtext">QRRCA</span></td>
 												<td><span class="data_tdtext">D2210/23</span></td>
@@ -119,6 +129,7 @@
 											</tr>
 											<tr>
 												<td><span class="data_tdtext">1</span></td>
+												<td><span class="data_tdtext">SE1GA</span></td>
 												<td><span class="data_tdtext">23-09-07 01:56</span></td>
 												<td><span class="data_tdtext">QRRCA</span></td>
 												<td><span class="data_tdtext">D2210/23</span></td>
@@ -152,7 +163,9 @@
 		<script>
 			menuRock("#nav_03");
 
-			tableScrollFunc("#uatm_info_notam_table");
+			window.addEventListener("load", () => {
+				tableScrollFunc("#uatm_info_notam_table");
+			})
 
 			// 퍼블확인용
 			let url = window.location.href.split('?')[1];
