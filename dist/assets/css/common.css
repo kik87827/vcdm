@@ -3996,7 +3996,7 @@ input.form_calendar {
   color: #1b1b1b;
   line-height: 1;
   font-weight: 500;
-  padding: 0 13px;
+  padding: 0 0 0 13px;
 }
 
 .grid_horizontal_current_bar {
@@ -4859,9 +4859,6 @@ input.paging_input {
 .status_item:last-of-type .status_item_text {
   padding-right: 0;
 }
-.status_item:last-of-type .status_item_text:before {
-  display: none;
-}
 .status_item:last-of-type .status_item_text:after {
   display: none;
 }
@@ -4887,7 +4884,6 @@ input.paging_input {
 .status_item.active:last-of-type:after {
   background-image: url("../images/item_step_head_blue.png") !important;
 }
-
 .status_item_text {
   padding: 0 16px 0 5px;
   white-space: nowrap;
