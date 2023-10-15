@@ -5456,7 +5456,7 @@ select.field_select:disabled {
 .data_table_zone.respon_type.respon_wid2 .data_table_tbody_row {
     min-width: 1680px;
   }
-  .data_single_table_wrap .data_single_table {
+  .data_single_table_wrap.long_type .data_single_table {
     min-width: 1440px;
   }
 }
