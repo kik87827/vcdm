@@ -7,6 +7,8 @@ window.addEventListener("load", () => {
 
 $(function(){
   datePicker();
+
+  //$("body").append("<div class='debug'></div>")
 })
 
 /**

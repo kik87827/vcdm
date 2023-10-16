@@ -903,13 +903,21 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   box-shadow: inset 0px 0px 5px transparent;
 }
 
+.debug {
+  height: 2px;
+  position: fixed;
+  top: 1080px;
+  width: 100%;
+  background: red;
+}
+
 .front_body {
   min-height: 100vh;
 }
 .page_wrap {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 1080px;
   margin: 0 auto;
   min-width: 1024px;
 }
@@ -920,7 +928,17 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   width: 100%;
   box-sizing: border-box;
 }
-
+.page_wrap.center_form_wrap {
+  min-height: 100vh;
+}
+.page_wrap.one_viewer {
+  display: flex;
+  /* .middle_wrap{flex:auto;} */
+}
+.page_wrap.one_viewer .middle_wrap {
+  display: flex;
+  flex-direction: column;
+}
 .header_wrap {
   flex: 0;
   box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.06);
@@ -1083,6 +1101,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 
 .footer_wrap {
   flex: 0 0 40px;
+  min-height: 40px;
   background: #1c212a;
   text-align: center;
   display: flex;
@@ -3208,7 +3227,7 @@ input.field_input {
 }
 /* monitor */
 .data_grid_wrap {
-  padding: 45px 30px;
+  padding: 30px 30px;
 }
 
 .data_both_row_wrap {
@@ -3376,7 +3395,7 @@ input.field_input {
 }
 
 .data_single_row {
-  margin-top: 33px;
+  margin-top: 20px;
 }
 
 .data_single_container {
@@ -3436,8 +3455,8 @@ input.field_input {
   border: 1px solid #888f99;
   display: block;
   text-align: center;
-  padding: 10px;
-  font-size: 18px;
+  padding: 8px;
+  font-size: 16px;
 }
 
 .render_key_bar:after {
@@ -3488,9 +3507,9 @@ input.field_input {
 }
 
 .render_data_tb_title {
-  min-height: 42px;
+  min-height: 36px;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 6px;
   background: #f0faff;
   border: 1px solid #d7d7d7;
   font-size: 16px;
@@ -3508,7 +3527,7 @@ input.field_input {
   background: #f5f5f5;
   border: 1px solid #d7d7d7;
   border-top: 0;
-  padding: 8px;
+  padding: 7px;
 }
 .render_data_tail_ctb thead th.current_cols {
   width: 18px;
@@ -3516,7 +3535,7 @@ input.field_input {
 }
 .render_data_tail_ctb tbody td {
   border: 1px solid #d7d7d7;
-  padding: 12px;
+  padding: 8px;
 }
 .render_data_tail_ctb tbody td.current_cols {
   width: 18px;
@@ -3553,7 +3572,7 @@ input.field_input {
   overflow: hidden;
   border-top: 0;
   border: 1px solid #d8d8d8;
-  min-height: 147px;
+  min-height: 121px;
   align-items: flex-end;
 }
 .quadbox_list > li {
@@ -3574,7 +3593,7 @@ input.field_input {
 .quadbox_chart_item {
   margin-left: -1px;
   display: block;
-  height: 32px;
+  height: 23px;
   border-top: 1px solid #d9d9d9;
   border-right: 1px solid #d9d9d9;
   border-left: 1px solid #d9d9d9;
@@ -3628,9 +3647,6 @@ input.field_input {
   .section_tab {
     margin-bottom: -1px;
   }
-  .donut_chart_spec {
-    font-size: 15px;
-  }
   .data_single_container {
     gap: 10px;
   }
@@ -3639,6 +3655,16 @@ input.field_input {
   }
   .data_tb_render_cols {
     padding: 0 5px;
+  }
+  .donut_chart_graphic_row {
+    width: 100px;
+    height: 100px;
+  }
+  .graphic_value {
+    font-size: 20px;
+  }
+  .donut_chart_spec {
+    font-size: 13px;
   }
 }
 /* timeline */
@@ -3669,14 +3695,14 @@ input.form_calendar {
 .data_timeline_container_row {
   border: 1px solid #dddddd;
   border-radius: 10px 0 10px 0;
-  padding: 23px 20px 0;
+  padding: 20px 20px 0;
 }
 
 .data_timeline_container {
   display: flex;
   position: relative;
   overflow: hidden;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .data_timeline_key_cols {
@@ -4430,9 +4456,9 @@ input.form_calendar {
 }
 
 .data_table_guide_box_wrap {
+  flex: 0;
   display: flex;
   gap: 23px;
-  margin-top: 7px;
 }
 
 .data_table_guide_box {
@@ -4466,6 +4492,7 @@ input.form_calendar {
   border-top: 0;
   border-radius: 0 0 8px 8px;
   padding: 20px;
+  min-height: 150px;
 }
 
 .swiper-tbody-scroll .swiper-scrollbar {
@@ -4694,12 +4721,14 @@ input.input_field {
 }
 
 .block_item_wrap {
-  padding: 60px 30px;
+  padding: 45px 30px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 80px;
+  height: 100%;
 }
 
-.block_item {
-  margin-bottom: 115px;
-}
 .block_item:last-of-type {
   margin-bottom: 0;
 }

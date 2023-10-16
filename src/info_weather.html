@@ -4,255 +4,249 @@
 <body class="front_body">
 	<div class="page_wrap">
 		@@include('./include/_header.html')
-		<section class="middle_wrap">
-			<div class="data_table_single_zone">
-				<div class="data_table_sort_wrap respon_type">
-					<div class="data_sort_main_cols">
-						<ul class="box_dtab_list">
-							<li><a href="#" class="box_dtab active">WEATHER</a></li>
-							<li><a href="#" class="box_dtab">NOTAM</a></li>
-							<li><a href="#" class="box_dtab">VERTIPORT</a></li>
-						</ul>
-					</div>	
-					<div class="data_sort_sub_cols">
-						<div class="object_data_item_group">
-							<div class="object_data_item">
-								<div class="object_key_cols"><span class="object_key_text">예보 발표시각</span></div>
-								<div class="object_value_cols"><span class="object_value_box">06:20 UTC 26 Sep 2023</span></div>
-							</div>
-							<div class="object_data_item">
-								<div class="object_key_cols"><span class="object_key_text">기상상태</span></div>
-								<div class="object_value_cols">
-									<div class="marker_box_group">
-										<span class="marker_box" style="background-color:#fff7a2;">주의</span>
-										<span class="marker_box" style="background-color:#ffdda2;">경계</span>
-										<span class="marker_box" style="background-color:#ffb8b8;">심각</span>
-									</div>
+		<section class="middle_wrap data_table_single_zone">
+			<div class="data_table_sort_wrap respon_type">
+				<div class="data_sort_main_cols">
+					<ul class="box_dtab_list">
+						<li><a href="#" class="box_dtab active">WEATHER</a></li>
+						<li><a href="#" class="box_dtab">NOTAM</a></li>
+						<li><a href="#" class="box_dtab">VERTIPORT</a></li>
+					</ul>
+				</div>	
+				<div class="data_sort_sub_cols">
+					<div class="object_data_item_group">
+						<div class="object_data_item">
+							<div class="object_key_cols"><span class="object_key_text">예보 발표시각</span></div>
+							<div class="object_value_cols"><span class="object_value_box">06:20 UTC 26 Sep 2023</span></div>
+						</div>
+						<div class="object_data_item">
+							<div class="object_key_cols"><span class="object_key_text">기상상태</span></div>
+							<div class="object_value_cols">
+								<div class="marker_box_group">
+									<span class="marker_box" style="background-color:#fff7a2;">주의</span>
+									<span class="marker_box" style="background-color:#ffdda2;">경계</span>
+									<span class="marker_box" style="background-color:#ffb8b8;">심각</span>
 								</div>
 							</div>
-							<div class="object_data_item">
-								<input type="text" class="form_calendar" value="2023-02-20">
-							</div>
+						</div>
+						<div class="object_data_item">
+							<input type="text" class="form_calendar" value="2023-02-20">
 						</div>
 					</div>
 				</div>
-				<div class="data_table_render_wrap">
-					<div class="data_single_table_wrap">
-						<table class="data_single_table has_merge">
-							<thead>
-								<tr>
-									<th rowspan="2"><span class="data_thtext">요소</span></th>
-									<th rowspan="2"><span class="data_thtext">OBS</span></th>
-									<th colspan="15"><span class="data_thtext">06</span></th>
-								</tr>
-								<tr>
-									<th><span class="data_thtext">06<br><span class="thtext_sub">KST</span></span></th>
-									<th><span class="data_thtext">07<br><span class="thtext_sub">KST</span></span></th>
-									<th><span class="data_thtext">08<br><span class="thtext_sub">KST</span></span></th>
-									<th><span class="data_thtext">09<br><span class="thtext_sub">KST</span></span></th>
-									<th><span class="data_thtext">10<br><span class="thtext_sub">KST</span></span></th>
-									<th><span class="data_thtext">11<br><span class="thtext_sub">KST</span></span></th>
-									<th><span class="data_thtext">12<br><span class="thtext_sub">KST</span></span></th>
-									<th><span class="data_thtext">13<br><span class="thtext_sub">KST</span></span></th>
-									<th><span class="data_thtext">14<br><span class="thtext_sub">KST</span></span></th>
-									<th><span class="data_thtext">15<br><span class="thtext_sub">KST</span></span></th>
-									<th><span class="data_thtext">16<br><span class="thtext_sub">KST</span></span></th>
-									<th><span class="data_thtext">17<br><span class="thtext_sub">KST</span></span></th>
-									<th><span class="data_thtext">18<br><span class="thtext_sub">KST</span></span></th>
-									<th><span class="data_thtext">19<br><span class="thtext_sub">KST</span></span></th>
-									<th><span class="data_thtext">20<br><span class="thtext_sub">KST</span></span></th>
-								</tr>
-							</thead>
-							<tbody>
-								<!-- <tr>
-									<td><span class="data_tdtext">vpo1</span></td>
-									<td><span class="data_tdtext">SE1GA</span></td>
-									<td><span class="data_tdtext">192.168.0.10</span></td>
-								</tr>		 -->
-								<tr>
-									<td><span class="data_tdtext">Type</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-									<td><span class="data_marker_text">PRVL</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">시정(m)</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-									<td><span class="data_marker_text">5000</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">실링(100FT)</span></td>
-									<td><span class="data_marker_text" style="background-color:#fff7a2;">5</span></td>
-									<td><span class="data_marker_text">5</span></td>
-									<td><span class="data_marker_text">5</span></td>
-									<td><span class="data_marker_text">5</span></td>
-									<td><span class="data_marker_text">5</span></td>
-									<td><span class="data_marker_text" style="background-color:#ffdda2;">5</span></td>
-									<td><span class="data_marker_text">5</span></td>
-									<td><span class="data_marker_text">5</span></td>
-									<td><span class="data_marker_text" style="background-color:#ffb8b8;">5</span></td>
-									<td><span class="data_marker_text">5</span></td>
-									<td><span class="data_marker_text">5</span></td>
-									<td><span class="data_marker_text">5</span></td>
-									<td><span class="data_marker_text">5</span></td>
-									<td><span class="data_marker_text">5</span></td>
-									<td><span class="data_marker_text">5</span></td>
-									<td><span class="data_marker_text">5</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">운량(okta)</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-									<td><span class="data_marker_text">BKN</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">일기현상</span></td>
-									<td><span class="data_marker_text" style="background-color:#fff7a2;">-RA</span></td>
-									<td><span class="data_marker_text" style="background-color:#fff7a2;">-RA</span></td>
-									<td><span class="data_marker_text" style="background-color:#fff7a2;">-RA</span></td>
-									<td><span class="data_marker_text" style="background-color:#fff7a2;">-RA</span></td>
-									<td><span class="data_marker_text">-RA</span></td>
-									<td><span class="data_marker_text" style="background-color:#ffdda2;">-RA</span></td>
-									<td><span class="data_marker_text" style="background-color:#ffdda2;">-RA</span></td>
-									<td><span class="data_marker_text">-RA</span></td>
-									<td><span class="data_marker_text" style="background-color:#ffb8b8;">-RA</span></td>
-									<td><span class="data_marker_text" style="background-color:#ffb8b8;">-RA</span></td>
-									<td><span class="data_marker_text">-RA</span></td>
-									<td><span class="data_marker_text">-RA</span></td>
-									<td><span class="data_marker_text">-RA</span></td>
-									<td><span class="data_marker_text">-RA</span></td>
-									<td><span class="data_marker_text" style="background-color:#fff7a2;">-RA</span></td>
-									<td><span class="data_marker_text" style="background-color:#fff7a2;">-RA</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">풍향(º)</span></td>
-									<td><span class="data_marker_text">60</span></td>
-									<td><span class="data_marker_text">60</span></td>
-									<td><span class="data_marker_text">60</span></td>
-									<td><span class="data_marker_text">60</span></td>
-									<td><span class="data_marker_text">60</span></td>
-									<td><span class="data_marker_text">60</span></td>
-									<td><span class="data_marker_text">60</span></td>
-									<td><span class="data_marker_text">60</span></td>
-									<td><span class="data_marker_text">60</span></td>
-									<td><span class="data_marker_text">60</span></td>
-									<td><span class="data_marker_text">60</span></td>
-									<td><span class="data_marker_text">60</span></td>
-									<td><span class="data_marker_text">60</span></td>
-									<td><span class="data_marker_text">60</span></td>
-									<td><span class="data_marker_text">60</span></td>
-									<td><span class="data_marker_text">60</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">풍속(kt)</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-								</tr>
-								<tr>
-									<td><span class="data_tdtext">최대풍속(kt)</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-									<td><span class="data_marker_text">4</span></td>
-								</tr>
-							</tbody>
-						</table>
+			</div>
+			<div class="data_table_render_wrap">
+				<div class="data_single_table_wrap">
+					<table class="data_single_table has_merge">
+						<thead>
+							<tr>
+								<th rowspan="2"><span class="data_thtext">요소</span></th>
+								<th rowspan="2"><span class="data_thtext">OBS</span></th>
+								<th colspan="15"><span class="data_thtext">06</span></th>
+							</tr>
+							<tr>
+								<th><span class="data_thtext">06<br><span class="thtext_sub">KST</span></span></th>
+								<th><span class="data_thtext">07<br><span class="thtext_sub">KST</span></span></th>
+								<th><span class="data_thtext">08<br><span class="thtext_sub">KST</span></span></th>
+								<th><span class="data_thtext">09<br><span class="thtext_sub">KST</span></span></th>
+								<th><span class="data_thtext">10<br><span class="thtext_sub">KST</span></span></th>
+								<th><span class="data_thtext">11<br><span class="thtext_sub">KST</span></span></th>
+								<th><span class="data_thtext">12<br><span class="thtext_sub">KST</span></span></th>
+								<th><span class="data_thtext">13<br><span class="thtext_sub">KST</span></span></th>
+								<th><span class="data_thtext">14<br><span class="thtext_sub">KST</span></span></th>
+								<th><span class="data_thtext">15<br><span class="thtext_sub">KST</span></span></th>
+								<th><span class="data_thtext">16<br><span class="thtext_sub">KST</span></span></th>
+								<th><span class="data_thtext">17<br><span class="thtext_sub">KST</span></span></th>
+								<th><span class="data_thtext">18<br><span class="thtext_sub">KST</span></span></th>
+								<th><span class="data_thtext">19<br><span class="thtext_sub">KST</span></span></th>
+								<th><span class="data_thtext">20<br><span class="thtext_sub">KST</span></span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- <tr>
+								<td><span class="data_tdtext">vpo1</span></td>
+								<td><span class="data_tdtext">SE1GA</span></td>
+								<td><span class="data_tdtext">192.168.0.10</span></td>
+							</tr>		 -->
+							<tr>
+								<td><span class="data_tdtext">Type</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+								<td><span class="data_marker_text">PRVL</span></td>
+							</tr>
+							<tr>
+								<td><span class="data_tdtext">시정(m)</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+								<td><span class="data_marker_text">5000</span></td>
+							</tr>
+							<tr>
+								<td><span class="data_tdtext">실링(100FT)</span></td>
+								<td><span class="data_marker_text" style="background-color:#fff7a2;">5</span></td>
+								<td><span class="data_marker_text">5</span></td>
+								<td><span class="data_marker_text">5</span></td>
+								<td><span class="data_marker_text">5</span></td>
+								<td><span class="data_marker_text">5</span></td>
+								<td><span class="data_marker_text" style="background-color:#ffdda2;">5</span></td>
+								<td><span class="data_marker_text">5</span></td>
+								<td><span class="data_marker_text">5</span></td>
+								<td><span class="data_marker_text" style="background-color:#ffb8b8;">5</span></td>
+								<td><span class="data_marker_text">5</span></td>
+								<td><span class="data_marker_text">5</span></td>
+								<td><span class="data_marker_text">5</span></td>
+								<td><span class="data_marker_text">5</span></td>
+								<td><span class="data_marker_text">5</span></td>
+								<td><span class="data_marker_text">5</span></td>
+								<td><span class="data_marker_text">5</span></td>
+							</tr>
+							<tr>
+								<td><span class="data_tdtext">운량(okta)</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+								<td><span class="data_marker_text">BKN</span></td>
+							</tr>
+							<tr>
+								<td><span class="data_tdtext">일기현상</span></td>
+								<td><span class="data_marker_text" style="background-color:#fff7a2;">-RA</span></td>
+								<td><span class="data_marker_text" style="background-color:#fff7a2;">-RA</span></td>
+								<td><span class="data_marker_text" style="background-color:#fff7a2;">-RA</span></td>
+								<td><span class="data_marker_text" style="background-color:#fff7a2;">-RA</span></td>
+								<td><span class="data_marker_text">-RA</span></td>
+								<td><span class="data_marker_text" style="background-color:#ffdda2;">-RA</span></td>
+								<td><span class="data_marker_text" style="background-color:#ffdda2;">-RA</span></td>
+								<td><span class="data_marker_text">-RA</span></td>
+								<td><span class="data_marker_text" style="background-color:#ffb8b8;">-RA</span></td>
+								<td><span class="data_marker_text" style="background-color:#ffb8b8;">-RA</span></td>
+								<td><span class="data_marker_text">-RA</span></td>
+								<td><span class="data_marker_text">-RA</span></td>
+								<td><span class="data_marker_text">-RA</span></td>
+								<td><span class="data_marker_text">-RA</span></td>
+								<td><span class="data_marker_text" style="background-color:#fff7a2;">-RA</span></td>
+								<td><span class="data_marker_text" style="background-color:#fff7a2;">-RA</span></td>
+							</tr>
+							<tr>
+								<td><span class="data_tdtext">풍향(º)</span></td>
+								<td><span class="data_marker_text">60</span></td>
+								<td><span class="data_marker_text">60</span></td>
+								<td><span class="data_marker_text">60</span></td>
+								<td><span class="data_marker_text">60</span></td>
+								<td><span class="data_marker_text">60</span></td>
+								<td><span class="data_marker_text">60</span></td>
+								<td><span class="data_marker_text">60</span></td>
+								<td><span class="data_marker_text">60</span></td>
+								<td><span class="data_marker_text">60</span></td>
+								<td><span class="data_marker_text">60</span></td>
+								<td><span class="data_marker_text">60</span></td>
+								<td><span class="data_marker_text">60</span></td>
+								<td><span class="data_marker_text">60</span></td>
+								<td><span class="data_marker_text">60</span></td>
+								<td><span class="data_marker_text">60</span></td>
+								<td><span class="data_marker_text">60</span></td>
+							</tr>
+							<tr>
+								<td><span class="data_tdtext">풍속(kt)</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+							</tr>
+							<tr>
+								<td><span class="data_tdtext">최대풍속(kt)</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+								<td><span class="data_marker_text">4</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="data_table_guide_box_wrap">
+				<div class="data_table_guide_box">
+					<div class="tb_guide_title_row"><p class="tb_guide_title">METAR</p></div>
+					<div class="tb_guide_content_row">
+						<p class="tb_guide_content_para">
+							VISIVILITY: 9999<br>
+							CLOUD: SCT020, BKN035, OVC070<br>
+							TEMP/DWPT: 27 DWPT 22<br>
+							QNH: 1013hPa/29.92inHg<br>
+							RMK:
+						</p>
 					</div>
 				</div>
-				<div class="data_table_guide_box_wrap">
-					<div class="data_table_guide_box">
-						<div class="tb_guide_title_row"><p class="tb_guide_title">METAR</p></div>
-						<div class="tb_guide_content_row">
-							<p class="tb_guide_content_para">
-								VISIVILITY: 9999<br>
-								CLOUD: SCT020, BKN035, OVC070<br>
-								TEMP/DWPT: 27 DWPT 22<br>
-								QNH: 1013hPa/29.92inHg<br>
-								RMK:<br>
-								<br>
-								<br>
-								<br>
-								<br>
-							</p>
-						</div>
-					</div>
-					<div class="data_table_guide_box type2">
-						<div class="tb_guide_title_row"><p class="tb_guide_title">TAF</p></div>
-						<div class="tb_guide_content_row">
-							<p class="tb_guide_content_para">
-								VISIVILITY: 9999<br>
-								CLOUD: SCT020, BKN035, OVC070<br>
-								TEMP/DWPT: 27 DWPT 22<br>
-								QNH: 1013hPa/29.92inHg<br>
-								RMK:
-							</p>
-						</div>
+				<div class="data_table_guide_box type2">
+					<div class="tb_guide_title_row"><p class="tb_guide_title">TAF</p></div>
+					<div class="tb_guide_content_row">
+						<p class="tb_guide_content_para">
+							VISIVILITY: 9999<br>
+							CLOUD: SCT020, BKN035, OVC070<br>
+							TEMP/DWPT: 27 DWPT 22<br>
+							QNH: 1013hPa/29.92inHg<br>
+							RMK:
+						</p>
 					</div>
 				</div>
 			</div>
