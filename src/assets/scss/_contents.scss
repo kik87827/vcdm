@@ -46,7 +46,7 @@ input.field_input{height:42px;box-sizing: border-box;border:1px solid #bbbbbb;te
 }
 
 /* monitor */
-.data_grid_wrap{padding:20px 30px;display: flex;box-sizing: border-box;flex-direction: column;height:100%;justify-content: center;}
+.data_grid_wrap{padding:20px 30px;display: flex;box-sizing: border-box;flex-direction: column;height:100%;/* justify-content: center; */}
 .data_both_row_wrap{display:flex;justify-content: flex-end;}
 .data_both_row{width:100%;display:flex;gap:20px;justify-content: flex-end;max-width:calc(100% - 100px)}
 .data_both_row .gap{flex:0 0 20px;}
@@ -198,7 +198,9 @@ input.field_input{height:42px;box-sizing: border-box;border:1px solid #bbbbbb;te
     .graphic_value{font-size:20px;}
     .donut_chart_spec{font-size:13px;}
 }
-
+@media (max-height:1080px){
+    .data_grid_wrap{justify-content: center;}
+}
 
 /* timeline */
 .data_timeline_wrap{padding:20px 30px;}

@@ -3224,8 +3224,7 @@ input.field_input {
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
-  height: 100%;
-  justify-content: center;
+  height: 100%; /* justify-content: center; */
 }
 
 .data_both_row_wrap {
@@ -3662,6 +3661,11 @@ input.field_input {
   }
   .donut_chart_spec {
     font-size: 13px;
+  }
+}
+@media (max-height: 1080px) {
+  .data_grid_wrap {
+    justify-content: center;
   }
 }
 /* timeline */
